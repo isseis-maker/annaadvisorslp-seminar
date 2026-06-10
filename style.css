@@ -1,0 +1,15 @@
+html { scroll-behavior: smooth; }
+  .pulse-btn:hover { animation: pulse 1.5s infinite; }
+  @keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(183, 0, 12, 0.4); }
+    70% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(183, 0, 12, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(183, 0, 12, 0); }
+  }
+  .bg-hero-pattern { background-image: linear-gradient(to right bottom, rgba(27, 28, 28, 0.8), rgba(27, 28, 28, 0.6)), url('https://lh3.googleusercontent.com/aida/AP1WRLvcsWDFMZxs0kHyUypr1c4FjCedntLvR9fJ9HkpYaCNNQChTKMpnbMdW9W1Bs9Y6qgnJ0XTXC_GHU2T501-J6AU2w6PWWZsiYKJi6GBENxypdo06GCHBjUIcae7b3FzbitUsj_SI3B_r75H4DpJrbhh3Sl1GSc4zoJAHfs6lsvxrzfN1M1jikfv6HA3BR5zFllOs6hdIW-3IRwTnxk-EUx1IF64A6fZy4gXAdd3Cx4sRn_JQWB5CjqaN6s'); background-size: cover; background-position: center; }
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+  
+  /* Speaker Image Styles */
+  .speaker-image-container {
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  }
