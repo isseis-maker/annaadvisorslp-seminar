@@ -114,36 +114,6 @@ main > section:first-child::after {
   position: relative;
 }
 
-.speaker-carousel-controls {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin-bottom: 4px;
-}
-
-.speaker-carousel-controls a {
-  align-items: center;
-  background: rgba(183, 0, 12, 0.12);
-  border: 1px solid rgba(183, 0, 12, 0.18);
-  border-radius: 999px;
-  color: #5f3f3b;
-  display: inline-flex;
-  font-family: Inter, sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  height: 24px;
-  justify-content: center;
-  transition: all 0.2s ease;
-  width: 44px;
-}
-
-.speaker-carousel-controls a:hover,
-.speaker-carousel-controls a:focus-visible {
-  background: #b7000c;
-  color: #ffffff;
-  width: 46px;
-}
-
 .speaker-arrow {
   align-items: center;
   background:
@@ -228,6 +198,23 @@ main > section:first-child::after {
   flex-direction: column;
   justify-content: center;
   padding: 44px;
+}
+
+.schedule-card {
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.schedule-card:hover {
+  border-color: rgba(183, 0, 12, 0.55);
+  box-shadow: 0 18px 48px rgba(183, 0, 12, 0.12);
+  transform: translateY(-2px);
+}
+
+.schedule-card:hover h3 {
+  color: #b7000c;
 }
 
 .strength-photo {
