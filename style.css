@@ -29,6 +29,31 @@ header {
   box-shadow: 0 10px 30px rgba(27, 28, 28, 0.06);
 }
 
+.brand-mark {
+  align-items: center;
+  color: #1b1c1c;
+  display: inline-flex;
+  gap: 12px;
+  min-width: 0;
+  text-decoration: none;
+}
+
+.brand-mark img {
+  display: block;
+  height: 38px;
+  object-fit: contain;
+  width: 38px;
+}
+
+.brand-mark span {
+  font-family: "Times New Roman", "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
 main > section:first-child::after {
   background: linear-gradient(90deg, #b7000c, #c5a059, rgba(255, 255, 255, 0));
   bottom: 0;
@@ -235,7 +260,7 @@ main > section:first-child::after {
 }
 
 .strength-photo img {
-  object-position: center 24%;
+  object-position: center center;
 }
 
 .strength-item {
@@ -313,6 +338,19 @@ details:hover {
 @media (max-width: 640px) {
   section {
     scroll-margin-top: 76px;
+  }
+
+  .brand-mark {
+    gap: 9px;
+  }
+
+  .brand-mark img {
+    height: 32px;
+    width: 32px;
+  }
+
+  .brand-mark span {
+    font-size: 18px;
   }
 
   .speaker-carousel {
