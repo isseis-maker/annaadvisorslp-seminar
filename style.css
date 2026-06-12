@@ -15,7 +15,6 @@
   width: 100%;
 }
 
-/* 子要素すべてのbox-sizingを安全に強制 */
 .daiva-fv-section *, .daiva-problem-section *, .daiva-learn-section *, .daiva-speaker-section *, .daiva-fund-section * {
   box-sizing: border-box;
 }
@@ -437,13 +436,9 @@
   padding: 10px;
 }
 
-
 /* ==========================================
    4.5 PREMIUM PORTFOLIO & 双璧
-   【!important完全撤廃・高詳細度セレクタ版】
    ========================================== */
-
-/* 特設ファンドセクションの背景 */
 .daiva-fund-section[data-theme="daiva-lux"] {
   background-color: #111111; 
   padding: 120px 0;
@@ -456,7 +451,6 @@
   padding: 0 40px;
 }
 
-/* 墨色背景用の共通テキスト美化 */
 .daiva-fund-section[data-theme="daiva-lux"] .daiva-section-title {
   color: #ffffff;
 }
@@ -464,7 +458,6 @@
   color: #aaaaaa;
 }
 
-/* 縦に並ぶアセット行 */
 .daiva-fund-section[data-theme="daiva-lux"] .daiva-asset-row {
   display: flex;
   align-items: center;
@@ -473,7 +466,6 @@
   margin-bottom: 80px;
 }
 
-/* J-Tower 3用の反転配列 */
 .daiva-fund-section[data-theme="daiva-lux"] .daiva-asset-row.type-reverse {
   flex-direction: row-reverse;
   margin-top: 100px;
@@ -530,9 +522,6 @@
   margin: 0 0 20px 0;
 }
 
-/* ──────────────────────────────────────────
-   【確定版】J-Tower 3情報を「2つの四角」で括るデザイン
-   ────────────────────────────────────────── */
 .daiva-fund-section[data-theme="daiva-lux"] .fund-regulatory-badge {
   display: block; 
   border: 1px solid rgba(188, 156, 78, 0.4); 
@@ -560,7 +549,6 @@
   display: none;
 }
 
-/* HMD Asia側の金融庁許可枠 */
 .daiva-fund-section[data-theme="daiva-lux"] .fund-regulatory-badge.type-landmark {
   border-color: rgba(255, 255, 255, 0.15); 
   background-color: rgba(255, 255, 255, 0.01);
@@ -569,8 +557,6 @@
 .daiva-fund-section[data-theme="daiva-lux"] .fund-regulatory-badge.type-landmark .badge-text {
   color: #cccccc;
 }
-
-/* ────────────────────────────────────────── */
 
 .daiva-fund-section[data-theme="daiva-lux"] .asset-description {
   font-size: 13px;
@@ -602,9 +588,6 @@
   color: #bc9c4e;
 }
 
-/* ──────────────────────────────────────────
-   J-Tower 特有数字（II%に見えないためのMontserrat指定）
-   ────────────────────────────────────────── */
 .daiva-fund-section[data-theme="daiva-lux"] .daiva-j-metrics {
   display: flex;
   gap: 40px;
@@ -652,7 +635,7 @@
 }
 
 /* ==========================================
-   自動無限ループ（HMD ➔ 横伸び / J-Tower ➔ 縦横ダブル伸び）
+   自動無限ループ
    ========================================== */
 .daiva-fund-section[data-theme="daiva-lux"] .daiva-slider-wrapper {
   border-top: 1px solid rgba(255,255,255,0.05);
@@ -665,7 +648,7 @@
 .daiva-fund-section[data-theme="daiva-lux"] .daiva-asset-row.type-reverse + .daiva-slider-wrapper {
   border-bottom: none;
   margin-bottom: 0;
-  padding-bottom: 160px; /* 縦横ダブル拡大用の安全余白 */
+  padding-bottom: 160px; 
 }
 
 .daiva-fund-section[data-theme="daiva-lux"] .slider-section-title {
@@ -692,7 +675,6 @@
   animation: daivaLinearLoop 35s linear infinite;
 }
 
-/* J-Tower用のトラック2 */
 .daiva-fund-section[data-theme="daiva-lux"] .daiva-loop-track.track-2 {
   animation: daivaLinearLoop2 40s linear infinite;
 }
@@ -701,7 +683,6 @@
   animation-play-state: paused;
 }
 
-/* ─── トラック1：HMD Asia用（横幅のみホバー拡大） ─── */
 .daiva-fund-section[data-theme="daiva-lux"] .daiva-loop-track:not(.track-2) .hotel-slide-card {
   flex-shrink: 0;
   width: 260px;
@@ -721,7 +702,6 @@
   overflow: hidden;
 }
 
-/* ─── トラック2：J-Tower 3用（縦・横ダブルでダイナミック伸縮） ─── */
 .daiva-fund-section[data-theme="daiva-lux"] .daiva-loop-track.track-2 .hotel-slide-card {
   flex-shrink: 0;
   width: 260px;
@@ -758,7 +738,7 @@
   padding: 16px;
 }
 .daiva-fund-section[data-theme="daiva-lux"] .daiva-loop-track.track-2 .hotel-slide-info {
-  display: none; /* J-Towerは写真のみのためテキスト非表示 */
+  display: none;
 }
 
 .daiva-fund-section[data-theme="daiva-lux"] .hotel-real-name {
