@@ -1,405 +1,838 @@
-html {
-  scroll-behavior: smooth;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Montserrat:wght@300;400;500&family=Noto+Serif+JP:wght@300;500&display=swap');
 
-body {
-  background:
-    linear-gradient(180deg, #ffffff 0%, #fbf9f9 42%, #ffffff 100%);
-  overflow-x: hidden;
-}
-
-section {
-  scroll-margin-top: 88px;
-}
-
-a,
-button,
-summary {
-  -webkit-tap-highlight-color: transparent;
-}
-
-a:focus-visible,
-button:focus-visible,
-summary:focus-visible {
-  outline: 3px solid rgba(183, 0, 12, 0.35);
-  outline-offset: 3px;
-}
-
-header {
-  box-shadow: 0 10px 30px rgba(27, 28, 28, 0.06);
-}
-
-.brand-mark {
-  align-items: center;
-  color: #1b1c1c;
-  display: inline-flex;
-  gap: 12px;
-  min-width: 0;
-  text-decoration: none;
-}
-
-.brand-mark img {
+/* ==========================================
+   00. 全共通設定 & セクションヘッダー
+   ========================================== */
+.daiva-fv-section, 
+.daiva-problem-section, 
+.daiva-learn-section, 
+.daiva-speaker-section, 
+.daiva-fund-section {
+  font-family: 'Noto Serif JP', serif;
+  box-sizing: border-box;
   display: block;
-  height: 38px;
-  object-fit: contain;
-  width: 38px;
-}
-
-.brand-mark span {
-  font-family: "Times New Roman", "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
-  font-size: 22px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  line-height: 1;
-  white-space: nowrap;
-}
-
-main > section:first-child::after {
-  background: linear-gradient(90deg, #b7000c, #c5a059, rgba(255, 255, 255, 0));
-  bottom: 0;
-  content: "";
-  height: 5px;
-  left: 0;
-  position: absolute;
-  right: 0;
-}
-
-.section-premium {
-  background:
-    linear-gradient(180deg, #ffffff 0%, #fbf9f9 54%, #f5f3f3 100%);
   position: relative;
+  width: 100%;
 }
 
-.section-premium::before {
-  background:
-    repeating-linear-gradient(90deg, rgba(148, 110, 105, 0.08) 0 1px, transparent 1px 72px);
-  content: "";
-  inset: 0;
-  pointer-events: none;
-  position: absolute;
+/* 子要素すべてのbox-sizingを安全に強制 */
+.daiva-fv-section *, .daiva-problem-section *, .daiva-learn-section *, .daiva-speaker-section *, .daiva-fund-section * {
+  box-sizing: border-box;
 }
 
-.pulse-btn:hover {
-  animation: pulse 1.5s infinite;
+.daiva-section-header {
+  text-align: center;
+  margin-bottom: 60px;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(183, 0, 12, 0.4);
-  }
-
-  70% {
-    transform: scale(1.02);
-    box-shadow: 0 0 0 10px rgba(183, 0, 12, 0);
-  }
-
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(183, 0, 12, 0);
-  }
+.daiva-section-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  color: #bc9c4e;
+  display: block;
+  margin-bottom: 12px;
 }
 
-.bg-hero-pattern {
-  background-image:
-    linear-gradient(to right bottom, rgba(27, 28, 28, 0.8), rgba(27, 28, 28, 0.6)),
-    url("https://lh3.googleusercontent.com/aida/AP1WRLvcsWDFMZxs0kHyUypr1c4FjCedntLvR9fJ9HkpYaCNNQChTKMpnbMdW9W1Bs9Y6qgnJ0XTXC_GHU2T501-J6AU2w6PWWZsiYKJi6GBENxypdo06GCHBjUIcae7b3FzbitUsj_SI3B_r75H4DpJrbhh3Sl1GSc4zoJAHfs6lsvxrzfN1M1jikfv6HA3BR5zFllOs6hdIW-3IRwTnxk-EUx1IF64A6fZy4gXAdd3Cx4sRn_JQWB5CjqaN6s");
-  background-size: cover;
-  background-position: center;
+.daiva-section-title {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  color: #1a1a1a;
+  margin: 0;
 }
 
-.hide-scrollbar::-webkit-scrollbar {
+.daiva-section-line {
+  width: 30px;
+  height: 1px;
+  background-color: #bc9c4e;
+  margin: 24px auto 0;
+}
+
+/* ==========================================
+   01. ファーストビュー (FV)
+   ========================================== */
+.daiva-fv-header-spacer {
+  width: 100%;
+  height: 90px;
+  background-color: #ffffff;
+  display: block;
+}
+
+.daiva-fv-section {
+  background-color: #fcfbfa;
+  padding: 80px 0;
+}
+
+.daiva-fv-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.daiva-fv-content {
+  flex: 1.1;
+  color: #1a1a1a;
+}
+
+.daiva-fv-badge-wrapper {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.daiva-fv-badge {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  border: 1px solid #bc9c4e;
+  color: #bc9c4e;
+  padding: 6px 16px;
+}
+
+.daiva-fv-title {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  margin: 0 0 24px 0;
+}
+
+.daiva-fv-title-sub {
+  font-weight: 500;
+}
+
+.daiva-fv-lead {
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  color: #555555;
+  margin-bottom: 40px;
+}
+
+.daiva-fv-features {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 48px;
+  border-top: 1px solid #eeeae4;
+  border-bottom: 1px solid #eeeae4;
+  padding: 20px 0;
+}
+
+.daiva-fv-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.daiva-fv-feature-item svg {
+  width: 22px;
+  height: 22px;
+  max-width: 22px;
+  flex-shrink: 0;
+  color: #bc9c4e;
+}
+
+.daiva-fv-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #bc9c4e;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 20px 40px;
+  min-width: 340px;
+  letter-spacing: 0.15em;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.4s ease;
+}
+
+.daiva-fv-btn:hover {
+  background-color: #a38339;
+  letter-spacing: 0.2em;
+}
+
+.daiva-fv-image-area {
+  flex: 0.9;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.daiva-fv-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================
+   02. 問題提起 (CHECK LIST)
+   ========================================== */
+.daiva-problem-section {
+  background-color: #fcfbfa;
+  padding: 120px 0;
+}
+
+.daiva-problem-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.daiva-problem-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 40px;
+  margin-bottom: 60px;
+}
+
+.daiva-problem-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #ffffff;
+  padding: 24px;
+  border: 1px solid #eeeae4;
+}
+
+.daiva-problem-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: #bc9c4e;
+}
+
+.daiva-problem-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333333;
+  margin: 0;
+}
+
+.daiva-problem-summary {
+  text-align: center;
+  border-top: 1px solid #eeeae4;
+  padding-top: 40px;
+}
+
+.daiva-summary-lead {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 12px;
+}
+
+.daiva-summary-main {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+/* ==========================================
+   03. 本セミナーで学べること (PROGRAM)
+   ========================================== */
+.daiva-learn-section {
+  background-color: #ffffff;
+  padding: 120px 0;
+}
+
+.daiva-learn-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.daiva-learn-story-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin-top: 80px;
+}
+
+.daiva-learn-row {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.daiva-learn-row:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.daiva-learn-image-area {
+  flex: 1;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.daiva-learn-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.daiva-learn-row:hover .daiva-learn-img {
+  transform: scale(1.05);
+}
+
+.daiva-learn-text-area {
+  flex: 1;
+}
+
+.daiva-learn-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  color: #bc9c4e;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.daiva-learn-item-title {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #1a1a1a;
+  margin: 0 0 16px 0;
+}
+
+.daiva-learn-item-desc {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #555555;
+  margin: 0;
+}
+
+/* ==========================================
+   04. 解説者紹介 (SPEAKERS)
+   ========================================== */
+.daiva-speaker-section {
+  background-color: #fcfbfa;
+  padding: 120px 0;
+}
+
+.daiva-speaker-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.daiva-section-lead {
+  font-size: 15px;
+  color: #555555;
+  margin-top: 16px;
+}
+
+.daiva-speaker-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.daiva-speaker-card {
+  background-color: #ffffff;
+  border: 1px solid #eeeae4;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.daiva-speaker-portrait {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.daiva-speaker-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.daiva-speaker-copy {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.daiva-speaker-name {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+}
+
+.daiva-speaker-title {
+  font-size: 13px;
+  color: #bc9c4e;
+  margin-bottom: 16px;
+}
+
+.daiva-speaker-license {
+  font-size: 11px;
+  color: #666666;
+}
+
+.daiva-speaker-bio {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #444444;
+  margin-bottom: 24px;
+}
+
+.daiva-speaker-book, .daiva-speaker-highlight {
+  font-size: 12px;
+  border-left: 1px solid #bc9c4e;
+  padding-left: 12px;
+  margin: 16px 0;
+}
+
+.daiva-book-label {
+  font-weight: 500;
+}
+
+.daiva-speaker-notes {
+  font-size: 11px;
+  color: #888888;
+}
+
+.daiva-speaker-schedule {
+  margin-top: auto;
+  border-top: 1px solid #eeeae4;
+  padding-top: 16px;
+}
+
+.daiva-schedule-title {
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.daiva-schedule-date {
+  font-size: 12px;
+  color: #666666;
+  margin-bottom: 12px;
+}
+
+.daiva-status-disabled {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #999999;
+  background-color: #f5f4f0;
+  padding: 10px;
+}
+
+.daiva-schedule-btn {
+  display: block;
+  text-align: center;
+  background-color: #bc9c4e;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 10px;
+}
+
+
+/* ==========================================
+   4.5 PREMIUM PORTFOLIO & 双璧
+   【!important完全撤廃・高詳細度セレクタ版】
+   ========================================== */
+
+/* 特設ファンドセクションの背景 */
+.daiva-fund-section[data-theme="daiva-lux"] {
+  background-color: #111111; 
+  padding: 120px 0;
+  color: #ffffff;
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-fund-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* 墨色背景用の共通テキスト美化 */
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-section-title {
+  color: #ffffff;
+}
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-section-lead {
+  color: #aaaaaa;
+}
+
+/* 縦に並ぶアセット行 */
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-asset-row {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+/* J-Tower 3用の反転配列 */
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-asset-row.type-reverse {
+  flex-direction: row-reverse;
+  margin-top: 100px;
+  margin-bottom: 0;
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-asset-visual {
+  flex: 1.1;
+  width: 100%;
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-asset-visual img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: transform 0.6s ease;
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-asset-row:hover .daiva-asset-visual img {
+  transform: scale(1.02);
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-asset-details {
+  flex: 0.9;
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .asset-meta-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .asset-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  color: #bc9c4e;
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .asset-category {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  color: #888888;
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .asset-main-title {
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+}
+
+/* ──────────────────────────────────────────
+   【確定版】J-Tower 3情報を「2つの四角」で括るデザイン
+   ────────────────────────────────────────── */
+.daiva-fund-section[data-theme="daiva-lux"] .fund-regulatory-badge {
+  display: block; 
+  border: 1px solid rgba(188, 156, 78, 0.4); 
+  padding: 14px 20px; 
+  margin-bottom: 12px; 
+  background-color: rgba(188, 156, 78, 0.03); 
+  border-radius: 0; 
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .fund-regulatory-badge:last-of-type {
+  margin-bottom: 24px;
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .fund-regulatory-badge .badge-text {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 13px; 
+  color: #ffffff; 
+  letter-spacing: 0.08em;
+  line-height: 1.4; 
+  font-weight: 300;
+  display: block;
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .fund-regulatory-badge .badge-icon {
   display: none;
 }
 
-.speaker-image-container {
-  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+/* HMD Asia側の金融庁許可枠 */
+.daiva-fund-section[data-theme="daiva-lux"] .fund-regulatory-badge.type-landmark {
+  border-color: rgba(255, 255, 255, 0.15); 
+  background-color: rgba(255, 255, 255, 0.01);
 }
 
-.speaker-carousel {
-  display: flex;
-  gap: 24px;
-  overflow-x: auto;
-  padding: 34px 4px 18px;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
+.daiva-fund-section[data-theme="daiva-lux"] .fund-regulatory-badge.type-landmark .badge-text {
+  color: #cccccc;
 }
 
-.speaker-carousel::-webkit-scrollbar {
-  height: 8px;
+/* ────────────────────────────────────────── */
+
+.daiva-fund-section[data-theme="daiva-lux"] .asset-description {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #cccccc;
+  margin-bottom: 24px;
+  font-weight: 300;
 }
 
-.speaker-carousel::-webkit-scrollbar-thumb {
-  background: rgba(183, 0, 12, 0.22);
-  border-radius: 999px;
+.daiva-fund-section[data-theme="daiva-lux"] .asset-bullets-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.speaker-carousel-shell {
+.daiva-fund-section[data-theme="daiva-lux"] .asset-bullets-list li {
+  font-size: 12px;
+  color: #aaaaaa;
   position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+  font-weight: 300;
 }
 
-.speaker-arrow {
-  align-items: center;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(251, 249, 249, 0.9));
-  border: 1px solid rgba(148, 110, 105, 0.22);
-  border-radius: 999px;
-  box-shadow: 0 18px 40px rgba(27, 28, 28, 0.16);
-  color: #b7000c;
-  display: inline-flex;
-  height: 52px;
-  justify-content: center;
+.daiva-fund-section[data-theme="daiva-lux"] .asset-bullets-list li::before {
+  content: "▪";
   position: absolute;
-  top: calc(50% + 12px);
-  transform: translateY(-50%);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-  width: 52px;
-  z-index: 5;
-}
-
-.speaker-arrow:hover {
-  background: #b7000c;
-  box-shadow: 0 22px 50px rgba(183, 0, 12, 0.26);
-  color: #ffffff;
-  transform: translateY(-50%) scale(1.04);
-}
-
-.speaker-arrow-left {
-  left: -26px;
-}
-
-.speaker-arrow-right {
-  right: -26px;
-}
-
-.speaker-arrow .material-symbols-outlined {
-  font-size: 30px;
-}
-
-.speaker-slide {
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(251, 249, 249, 0.94));
-  border: 1px solid rgba(148, 110, 105, 0.18);
-  border-radius: 8px;
-  box-shadow: 0 24px 70px rgba(27, 28, 28, 0.1);
-  display: flex;
-  flex: 0 0 100%;
-  min-height: 520px;
-  overflow: hidden;
-  position: relative;
-  scroll-margin-top: 110px;
-  scroll-snap-align: center;
-}
-
-.speaker-slide::before {
-  background: linear-gradient(180deg, #b7000c, #c5a059);
-  content: "";
-  inset: 0 auto 0 0;
-  position: absolute;
-  width: 6px;
-}
-
-.speaker-portrait {
-  align-items: flex-end;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(197, 160, 89, 0.08));
-  display: flex;
-  flex: 0 0 40%;
-  justify-content: center;
-  min-height: 420px;
-  padding: 28px 28px 0;
-  position: relative;
-}
-
-.speaker-portrait img {
-  filter: contrast(1.04) saturate(1.02);
-  mix-blend-mode: multiply;
-}
-
-.speaker-copy {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: center;
-  padding: 44px;
-}
-
-.schedule-card {
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease,
-    transform 0.2s ease;
-}
-
-.schedule-card:hover {
-  border-color: rgba(183, 0, 12, 0.55);
-  box-shadow: 0 18px 48px rgba(183, 0, 12, 0.12);
-  transform: translateY(-2px);
-}
-
-.schedule-card:hover h3 {
-  color: #b7000c;
-}
-
-.strength-photo {
-  aspect-ratio: 4 / 5;
-  border-radius: 8px;
-  box-shadow: 0 28px 80px rgba(27, 28, 28, 0.14);
-  min-height: 540px;
-  overflow: hidden;
-  position: relative;
-}
-
-.strength-photo::after {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(27, 28, 28, 0.08));
-  content: "";
-  inset: 0;
-  pointer-events: none;
-  position: absolute;
-}
-
-.strength-photo img {
-  object-position: center center;
-}
-
-.strength-item {
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(148, 110, 105, 0.16);
-  border-radius: 8px;
-  padding: 16px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.strength-item:hover {
-  box-shadow: 0 16px 40px rgba(27, 28, 28, 0.08);
-  transform: translateY(-2px);
-}
-
-.strength-icon {
-  align-items: center;
-  background:
-    radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.95), transparent 28%),
-    linear-gradient(135deg, rgba(197, 160, 89, 0.2), rgba(183, 0, 12, 0.1));
-  border: 1px solid rgba(197, 160, 89, 0.45);
-  border-radius: 999px;
-  color: #b7000c;
-  display: inline-flex;
-  flex-shrink: 0;
-  height: 44px;
-  justify-content: center;
-  width: 44px;
-}
-
-.strength-icon .material-symbols-outlined {
-  font-size: 24px;
-}
-
-section:not(:first-child) h2 {
-  letter-spacing: 0;
-}
-
-details {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-details:hover {
-  transform: translateY(-1px);
-}
-
-#contact iframe {
-  display: block;
-  min-height: 3600px;
-  width: 100vw;
-  background: transparent;
-  overflow: hidden;
-}
-
-.seminar-form-embed {
-  left: 50%;
-  margin-left: -50vw;
-  position: relative;
-  width: 100vw;
-}
-
-.seminar-form-embed::before {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-  content: "";
-  display: block;
-  height: 24px;
   left: 0;
-  pointer-events: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1;
+  color: #bc9c4e;
 }
 
-@media (max-width: 640px) {
-  section {
-    scroll-margin-top: 76px;
-  }
-
-  .brand-mark {
-    gap: 9px;
-  }
-
-  .brand-mark img {
-    height: 32px;
-    width: 32px;
-  }
-
-  .brand-mark span {
-    font-size: 18px;
-  }
-
-  .speaker-carousel {
-    gap: 16px;
-    margin-left: -20px;
-    margin-right: -20px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .speaker-arrow {
-    height: 44px;
-    top: 47%;
-    width: 44px;
-  }
-
-  .speaker-arrow-left {
-    left: -2px;
-  }
-
-  .speaker-arrow-right {
-    right: -2px;
-  }
-
-  .speaker-slide {
-    flex-basis: calc(100vw - 40px);
-    min-height: auto;
-  }
-
-  .speaker-portrait {
-    min-height: 260px;
-    padding: 22px 18px 0;
-  }
-
-  .speaker-copy {
-    padding: 26px 20px 28px;
-  }
-
-  .strength-photo {
-    min-height: 420px;
-  }
-
-  #contact iframe {
-    min-height: 4400px;
-  }
+/* ──────────────────────────────────────────
+   J-Tower 特有数字（II%に見えないためのMontserrat指定）
+   ────────────────────────────────────────── */
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-j-metrics {
+  display: flex;
+  gap: 40px;
+  margin: 32px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 24px 0;
 }
 
-@media (max-width: 767px) {
-  .speaker-slide {
+.daiva-fund-section[data-theme="daiva-lux"] .metric-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .metric-label {
+  font-size: 11px;
+  color: #bc9c4e;
+  font-weight: 500;
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .metric-val {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .metric-unit {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.2rem;
+  margin-left: 4px;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .metric-unit-front {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  color: #bc9c4e;
+  margin-right: 2px;
+  font-weight: 300;
+}
+
+/* ==========================================
+   自動無限ループ（HMD ➔ 横伸び / J-Tower ➔ 縦横ダブル伸び）
+   ========================================== */
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-slider-wrapper {
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding: 40px 0 60px 0;
+  margin: 40px 0;
+  overflow: hidden;
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-asset-row.type-reverse + .daiva-slider-wrapper {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 160px; /* 縦横ダブル拡大用の安全余白 */
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .slider-section-title {
+  font-size: 12px;
+  color: #bc9c4e;
+  font-weight: 500;
+  margin-bottom: 32px;
+  letter-spacing: 0.1em;
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-infinite-loop-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center; 
+  min-height: 340px;
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-loop-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  align-items: center;
+  animation: daivaLinearLoop 35s linear infinite;
+}
+
+/* J-Tower用のトラック2 */
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-loop-track.track-2 {
+  animation: daivaLinearLoop2 40s linear infinite;
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-infinite-loop-container:hover .daiva-loop-track {
+  animation-play-state: paused;
+}
+
+/* ─── トラック1：HMD Asia用（横幅のみホバー拡大） ─── */
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-loop-track:not(.track-2) .hotel-slide-card {
+  flex-shrink: 0;
+  width: 260px;
+  background-color: #1a1a1a;
+  border: 1px solid rgba(255,255,255,0.05);
+  overflow: hidden;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-loop-track:not(.track-2) .hotel-slide-card:hover {
+  width: 480px;
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-loop-track:not(.track-2) .hotel-slide-img-box {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+/* ─── トラック2：J-Tower 3用（縦・横ダブルでダイナミック伸縮） ─── */
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-loop-track.track-2 .hotel-slide-card {
+  flex-shrink: 0;
+  width: 260px;
+  height: 180px;
+  background-color: transparent;
+  border: 1px solid rgba(255,255,255,0.1);
+  overflow: hidden;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+              height 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-loop-track.track-2 .hotel-slide-card:hover {
+  width: 460px;
+  height: 320px;
+  z-index: 10;
+  border-color: #bc9c4e;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-loop-track.track-2 .hotel-slide-img-box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .hotel-slide-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .hotel-slide-info {
+  padding: 16px;
+}
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-loop-track.track-2 .hotel-slide-info {
+  display: none; /* J-Towerは写真のみのためテキスト非表示 */
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .hotel-real-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .hotel-real-meta {
+  font-size: 11px;
+  color: #aaaaaa;
+  margin: 0;
+  line-height: 1.4;
+}
+
+@keyframes daivaLinearLoop {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 10px)); }
+}
+
+@keyframes daivaLinearLoop2 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 10px)); }
+}
+
+/* ==========================================
+   レスポンシブ (スマホ対応)
+   ========================================== */
+@media (max-width: 992px) {
+  .daiva-fv-container {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+  .daiva-fv-image-area {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+  }
+  .daiva-fv-title {
+    font-size: 2rem;
+  }
+  .daiva-problem-grid, .daiva-speaker-grid {
+    grid-template-columns: 1fr;
+  }
+  .daiva-learn-row, 
+  .daiva-learn-row:nth-child(even), 
+  .daiva-fund-section[data-theme="daiva-lux"] .daiva-asset-row, 
+  .daiva-fund-section[data-theme="daiva-lux"] .daiva-asset-row.type-reverse {
     flex-direction: column;
+    gap: 24px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .daiva-learn-image-area, 
+  .daiva-learn-text-area, 
+  .daiva-fund-section[data-theme="daiva-lux"] .daiva-asset-visual, 
+  .daiva-fund-section[data-theme="daiva-lux"] .daiva-asset-details {
+    width: 100%;
+  }
+  .daiva-fund-section[data-theme="daiva-lux"] .daiva-j-metrics {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .daiva-fund-section[data-theme="daiva-lux"] .hotel-slide-card, 
+  .daiva-fund-section[data-theme="daiva-lux"] .daiva-loop-track.track-2 .hotel-slide-card {
+    width: 240px;
+    height: 160px;
+  }
+  .daiva-fund-section[data-theme="daiva-lux"] .daiva-loop-track .hotel-slide-card:hover,
+  .daiva-fund-section[data-theme="daiva-lux"] .daiva-loop-track.track-2 .hotel-slide-card:hover {
+    width: 240px;
+    height: 160px;
+  }
+  .daiva-fund-section[data-theme="daiva-lux"] .daiva-asset-row.type-reverse + .daiva-slider-wrapper {
+    padding-bottom: 40px;
   }
 }
