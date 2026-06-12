@@ -49,7 +49,7 @@
 }
 
 /* ==========================================
-   01. ファーストビュー (FV) 調整版
+   01. ファーストビュー (FV)
    ========================================== */
 .daiva-fv-header-spacer {
   width: 100%;
@@ -73,38 +73,107 @@
 }
 
 .daiva-fv-content {
-  flex: 1.2; /* ➔ 横幅に少しだけ余裕を持たせて自動改行を防ぐ */
+  flex: 1.2; /* 横幅を広げて改行の器に余裕を持たせる */
   color: #1a1a1a;
 }
 
-/* タイトル全体の制御 */
+.daiva-fv-badge-wrapper {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.daiva-fv-badge {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  border: 1px solid #bc9c4e;
+  color: #bc9c4e;
+  padding: 6px 16px;
+}
+
 .daiva-fv-title {
-  font-size: 2.8rem; /* ➔ ほんの少しだけ（3remから）シャープにして2行に収めやすく調整 */
+  font-size: 2.8rem; /* ほんの少しシャープにして収まりを極限まで綺麗に */
   font-weight: 300;
-  line-height: 1.5; /* ➔ 2行が綺麗に独立して見えるゆったりした行間 */
+  line-height: 1.5;
   letter-spacing: 0.12em;
   margin: 0 0 24px 0;
 }
 
-/* ➔ 【新設】1行ずつの塊として扱い、意図しない場所でのぶつ切りを完全に防ぐ */
+/* 改行をピシッと2行に固定する魔法 */
 .daiva-fv-title-line {
   display: block;
-  white-space: nowrap; /* ➔ 枠の中で「り、」だけが絶対に落ちないように強制 */
+  white-space: nowrap;
 }
 
 .daiva-fv-title-sub {
   font-weight: 500;
 }
 
-/* スマホ用レスポンシブの調整（最下部の@mediaの中にあるタイトル指定も上書きしてください） */
-@media (max-width: 992px) {
-  .daiva-fv-title {
-    font-size: 2rem;
-  }
-  .daiva-fv-title-line {
-    white-space: normal; /* ➔ スマホ画面では横幅に合わせて自然に折り返すように安全弁を解放 */
-  }
+.daiva-fv-lead {
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  color: #555555;
+  margin-bottom: 40px;
 }
+
+.daiva-fv-features {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 48px;
+  border-top: 1px solid #eeeae4;
+  border-bottom: 1px solid #eeeae4;
+  padding: 20px 0;
+}
+
+.daiva-fv-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.daiva-fv-feature-item svg {
+  width: 22px;
+  height: 22px;
+  max-width: 22px;
+  flex-shrink: 0;
+  color: #bc9c4e;
+}
+
+.daiva-fv-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #bc9c4e;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 20px 40px;
+  min-width: 340px;
+  letter-spacing: 0.15em;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.4s ease;
+}
+
+.daiva-fv-btn:hover {
+  background-color: #a38339;
+  letter-spacing: 0.2em;
+}
+
+.daiva-fv-image-area {
+  flex: 0.9;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.daiva-fv-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* ==========================================
    02. 問題提起 (CHECK LIST)
    ========================================== */
@@ -459,17 +528,32 @@
   margin: 0 0 20px 0;
 }
 
-.daiva-fund-section[data-theme="daiva-lux"] .fund-regulatory-badge {
+/* J-Towerスペック枠の横並び親コンテナ */
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-badge-inline-group {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.daiva-fund-section[data-theme="daiva-lux"] .daiva-badge-inline-group .fund-regulatory-badge {
+  flex: 1;
+  margin-bottom: 0 !important;
+  text-align: center;
   display: block; 
   border: 1px solid rgba(188, 156, 78, 0.4); 
   padding: 14px 20px; 
-  margin-bottom: 12px; 
   background-color: rgba(188, 156, 78, 0.03); 
   border-radius: 0; 
 }
 
-.daiva-fund-section[data-theme="daiva-lux"] .fund-regulatory-badge:last-of-type {
+/* 通常のバッジ属性（左側アセット等） */
+.daiva-fund-section[data-theme="daiva-lux"] .fund-regulatory-badge {
+  display: block; 
+  border: 1px solid rgba(188, 156, 78, 0.4); 
+  padding: 14px 20px; 
   margin-bottom: 24px;
+  background-color: rgba(188, 156, 78, 0.03); 
+  border-radius: 0; 
 }
 
 .daiva-fund-section[data-theme="daiva-lux"] .fund-regulatory-badge .badge-text {
@@ -703,7 +787,7 @@
 }
 
 /* ==========================================
-   レスポンシブ (スマホ対応)
+   レスポンシブ
    ========================================== */
 @media (max-width: 992px) {
   .daiva-fv-container {
@@ -716,6 +800,9 @@
   }
   .daiva-fv-title {
     font-size: 2rem;
+  }
+  .daiva-fv-title-line {
+    white-space: normal; /* スマホでは自動折り返しを許可 */
   }
   .daiva-problem-grid, .daiva-speaker-grid {
     grid-template-columns: 1fr;
@@ -751,5 +838,12 @@
   }
   .daiva-fund-section[data-theme="daiva-lux"] .daiva-asset-row.type-reverse + .daiva-slider-wrapper {
     padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .daiva-fund-section[data-theme="daiva-lux"] .daiva-badge-inline-group {
+    flex-direction: column;
+    gap: 10px;
   }
 }
