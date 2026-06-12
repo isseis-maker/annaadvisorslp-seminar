@@ -1,601 +1,496 @@
-<!DOCTYPE html>
+<!-- ==========================================
+     01. ファーストビュー (FV) セクション
+     ========================================== -->
+<div class="daiva-fv-header-spacer"></div>
 
-<html class="light" lang="ja"><head><meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta name="description" content="米ドル資産形成とカンボジア不動産投資について、現地を知るプロが解説するアンナアドバイザーズの無料オンラインセミナーです。"/>
-<title>アンナアドバイザーズ カンボジア不動産投資セミナー</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Noto+Sans+JP:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        "colors": {
-                "on-tertiary": "#ffffff",
-                "accent-gold": "#C5A059",
-                "tertiary-fixed": "#e0e3e5",
-                "primary-fixed-dim": "#ffb4aa",
-                "background-main": "#FFFFFF",
-                "on-secondary-fixed-variant": "#374765",
-                "on-secondary-container": "#4f5f7f",
-                "outline": "#946e69",
-                "surface-dark": "#333333",
-                "surface-container-lowest": "#ffffff",
-                "secondary-container": "#cadaff",
-                "inverse-surface": "#303031",
-                "error-container": "#ffdad6",
-                "on-primary-fixed-variant": "#930007",
-                "on-background": "#1b1c1c",
-                "on-tertiary-fixed": "#181c1e",
-                "surface-bright": "#fbf9f9",
-                "surface-variant": "#e4e2e2",
-                "secondary": "#4e5f7e",
-                "on-secondary": "#ffffff",
-                "on-surface-variant": "#5f3f3b",
-                "status-error": "#FF4D4F",
-                "surface-dim": "#dbdad9",
-                "surface-container-low": "#f5f3f3",
-                "on-tertiary-container": "#f6f9fb",
-                "secondary-fixed-dim": "#b6c7eb",
-                "surface-container-high": "#e9e8e7",
-                "surface-container-highest": "#e4e2e2",
-                "secondary-fixed": "#d7e2ff",
-                "tertiary": "#565b5c",
-                "inverse-on-surface": "#f2f0f0",
-                "on-tertiary-fixed-variant": "#434749",
-                "on-primary-fixed": "#410001",
-                "primary": "#b7000c",
-                "outline-variant": "#e9bcb6",
-                "tertiary-fixed-dim": "#c4c7c9",
-                "surface-tint": "#c0000d",
-                "tertiary-container": "#6f7375",
-                "on-primary-container": "#fff7f6",
-                "on-primary": "#ffffff",
-                "inverse-primary": "#ffb4aa",
-                "surface": "#fbf9f9",
-                "on-secondary-fixed": "#081b38",
-                "on-error": "#ffffff",
-                "on-surface": "#1b1c1c",
-                "on-error-container": "#93000a",
-                "background": "#fbf9f9",
-                "surface-container": "#efeded",
-                "error": "#ba1a1a",
-                "primary-fixed": "#ffdad5",
-                "primary-container": "#e60012"
-        },
-        "borderRadius": {
-                "DEFAULT": "0.125rem",
-                "lg": "0.25rem",
-                "xl": "0.5rem",
-                "full": "0.75rem"
-        },
-        "spacing": {
-                "section-gap-mobile": "64px",
-                "section-gap-desktop": "120px",
-                "container-max-width": "1100px",
-                "margin-mobile": "20px",
-                "gutter": "24px"
-        },
-        "fontFamily": {
-                "label-sm": [
-                        "Inter"
-                ],
-                "headline-xl": [
-                        "Noto Sans JP"
-                ],
-                "headline-xl-mobile": [
-                        "Noto Sans JP"
-                ],
-                "numeral-display": [
-                        "Inter"
-                ],
-                "body-lg": [
-                        "Noto Sans JP"
-                ],
-                "headline-md": [
-                        "Noto Sans JP"
-                ],
-                "display-lg": [
-                        "Noto Sans JP"
-                ],
-                "body-md": [
-                        "Noto Sans JP"
-                ]
-        },
-        "fontSize": {
-                "label-sm": [
-                        "14px",
-                        {
-                                "lineHeight": "1.4",
-                                "letterSpacing": "0.05em",
-                                "fontWeight": "600"
-                        }
-                ],
-                "headline-xl": [
-                        "32px",
-                        {
-                                "lineHeight": "1.4",
-                                "letterSpacing": "0.01em",
-                                "fontWeight": "700"
-                        }
-                ],
-                "headline-xl-mobile": [
-                        "24px",
-                        {
-                                "lineHeight": "1.4",
-                                "fontWeight": "700"
-                        }
-                ],
-                "numeral-display": [
-                        "40px",
-                        {
-                                "lineHeight": "1",
-                                "letterSpacing": "0",
-                                "fontWeight": "700"
-                        }
-                ],
-                "body-lg": [
-                        "18px",
-                        {
-                                "lineHeight": "1.8",
-                                "fontWeight": "400"
-                        }
-                ],
-                "headline-md": [
-                        "24px",
-                        {
-                                "lineHeight": "1.5",
-                                "fontWeight": "700"
-                        }
-                ],
-                "display-lg": [
-                        "48px",
-                        {
-                                "lineHeight": "1.2",
-                                "letterSpacing": "-0.02em",
-                                "fontWeight": "700"
-                        }
-                ],
-                "body-md": [
-                        "16px",
-                        {
-                                "lineHeight": "1.7",
-                                "fontWeight": "400"
-                        }
-                ]
-        }
-},
-    },
-  }
-</script>
-<link rel="stylesheet" href="style.css?v=logo-strength-webp"/>
-</head><body class="bg-background text-on-background font-body-md text-body-md antialiased">
-<!-- TopAppBar -->
-<header class="fixed w-full z-50 bg-surface/95 dark:bg-surface-dark border-b border-outline-variant/10 shadow-sm backdrop-blur">
-<div class="flex justify-between items-center w-full px-margin-mobile md:px-gutter max-w-container-max-width mx-auto h-16">
-<a class="brand-mark" href="#top" aria-label="Anna Advisors トップへ">
-<img alt="Anna Advisors ロゴ" src="https://anna-advisors.com/wp-content/uploads/2025/12/7d7bbed9d0622ffc1dc3793a325d0187.webp"/>
-<span>Anna Advisors</span>
-</a>
-<div class="hidden md:flex gap-6">
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#speakers">解説者紹介</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#schedule">スケジュール</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#faq">FAQ</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#contact">お問い合わせ</a>
-</div>
-<a class="bg-primary text-on-primary px-4 py-2 rounded font-label-sm text-label-sm font-bold shadow-sm hover:bg-surface-tint transition-colors" href="#contact" aria-label="セミナー申し込みフォームへ移動">
-      申し込む
-    </a>
-</div>
-</header>
-<main class="pt-16 pb-20 md:pb-0">
-<!-- Hero Section -->
-<section class="relative w-full h-[68vh] min-h-[560px] md:h-[720px] flex items-center bg-surface-dark overflow-hidden" id="top">
-<div class="absolute inset-0">
-<img alt="Phnom Penh skyline" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvcsWDFMZxs0kHyUypr1c4FjCedntLvR9fJ9HkpYaCNNQChTKMpnbMdW9W1Bs9Y6qgnJ0XTXC_GHU2T501-J6AU2w6PWWZsiYKJi6GBENxypdo06GCHBjUIcae7b3FzbitUsj_SI3B_r75H4DpJrbhh3Sl1GSc4zoJAHfs6lsvxrzfN1M1jikfv6HA3BR5zFllOs6hdIW-3IRwTnxk-EUx1IF64A6fZy4gXAdd3Cx4sRn_JQWB5CjqaN6s"/>
-<div class="absolute inset-0 bg-gradient-to-r from-black/80 to-black/30 md:to-transparent"></div>
-</div>
-<div class="relative z-10 w-full max-w-container-max-width mx-auto px-margin-mobile md:px-gutter text-center md:text-left">
-<span class="inline-block bg-white text-primary border border-primary font-label-sm font-bold px-4 py-1.5 rounded-full mb-6 shadow-sm">無料オンライン開催 / 少人数限定</span>
-<h1 class="font-display-lg text-headline-xl md:text-display-lg font-bold text-white mb-6 leading-tight drop-shadow-lg">
-      資産を「米ドル」で守り、<br class="hidden md:block"/>成長国で増やす。
-    </h1>
-<p class="font-body-lg text-body-lg md:text-xl text-white/90 mb-6 drop-shadow-md">
-      カンボジア不動産投資の真実を、プロが徹底解説。
-    </p>
-<div class="flex flex-wrap justify-center md:justify-start gap-3 mb-10 text-sm text-white/95">
-<span class="inline-flex items-center gap-1.5 bg-white/15 border border-white/25 px-3 py-2 rounded backdrop-blur"><span class="material-symbols-outlined text-base" aria-hidden="true">videocam</span>Zoom開催</span>
-<span class="inline-flex items-center gap-1.5 bg-white/15 border border-white/25 px-3 py-2 rounded backdrop-blur"><span class="material-symbols-outlined text-base" aria-hidden="true">paid</span>米ドル資産形成</span>
-<span class="inline-flex items-center gap-1.5 bg-white/15 border border-white/25 px-3 py-2 rounded backdrop-blur"><span class="material-symbols-outlined text-base" aria-hidden="true">support_agent</span>個別面談も選択可</span>
-</div>
-<a class="inline-block bg-primary text-on-primary font-headline-md text-lg md:text-xl font-bold py-4 px-10 rounded shadow-lg hover:bg-surface-tint hover:scale-105 transition-all duration-300 pulse-btn" href="#contact">
-      無料オンラインセミナーに申し込む
-    </a>
-</div>
-</section>
-<!-- Problem Section (Are you experiencing this?) -->
-<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-low" id="about">
-<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-gutter">
-<div class="text-center mb-12">
-<h2 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl font-bold text-secondary mb-2">あなたにあてはまる項目はありませんか?
-        </h2>
-<div class="w-10 h-1 bg-primary mx-auto mb-4"></div>
-<p class="font-body-md text-body-md text-on-surface-variant">
-          一つでも該当する方は、ぜひこの先をお読みください。
-        </p>
-</div>
-<div class="grid md:grid-cols-2 gap-8 items-center">
-<div class="bg-surface p-6 md:p-8 rounded-xl border border-outline-variant/30 shadow-sm">
-<ul class="space-y-4 font-body-lg text-body-md md:text-body-lg text-on-surface">
-<li class="flex items-start">
-<span class="material-symbols-outlined text-primary mr-3 mt-1" data-icon="check_circle" data-weight="fill">check_circle</span>
-<span class=""><strong>分散投資</strong> のため、海外不動産を購入したい！</span>
-</li>
-<li class="flex items-start">
-<span class="material-symbols-outlined text-primary mr-3 mt-1" data-icon="check_circle" data-weight="fill">check_circle</span>
-<span class=""><strong>法人で不動産を保有</strong> 、3期以上決算を終え、決算書が赤ではない！</span>
-</li>
-<li class="flex items-start">
-<span class="material-symbols-outlined text-primary mr-3 mt-1" data-icon="check_circle" data-weight="fill">check_circle</span>
-<span class=""><strong>利回りが下がってきたので</strong> 、より利回りの高い物件を購入したい！</span>
-</li>
-<li class="flex items-start">
-<span class="material-symbols-outlined text-primary mr-3 mt-1" data-icon="check_circle" data-weight="fill">check_circle</span>
-<span class=""><strong>資産が株式と債券なので</strong> 、不動産の保有を検討している！</span>
-</li>
-<li class="flex items-start">
-<span class="material-symbols-outlined text-primary mr-3 mt-1" data-icon="check_circle" data-weight="fill">check_circle</span>
-<span class=""><strong>日本円に偏っている</strong> ため、米ドルを保有することを検討している！</span>
-</li>
-</ul>
-</div>
-<div class="text-center mt-8 md:mt-0 bg-error-container/20 p-8 rounded-xl border border-error/20 shadow-sm relative overflow-hidden">
-<div class="absolute top-0 left-0 w-full h-1 bg-error"></div>
-<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-4 leading-relaxed">
-            日本人の資産は90％以上が<br class="hidden md:block"/>円資産に偏っています
-          </h3>
-<p class="font-body-lg text-body-lg text-on-surface-variant font-bold mb-8">
-            資産を日本円のみで保有することは<br/>
-<span class="text-error text-xl md:text-2xl border-b-4 border-error/30 pb-1 inline-block mt-2">大きなリスク</span>です。
-          </p>
-<a class="inline-flex items-center justify-center w-full sm:w-auto bg-primary text-on-primary font-headline-md text-body-lg md:text-headline-md font-bold py-3 px-8 rounded shadow-sm hover:bg-surface-tint transition-colors" href="#contact">
-            セミナーで解決策を知る
-          </a>
-</div>
-</div>
-</div>
-</section>
-<!-- Speakers Section -->
-<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface overflow-hidden section-premium" id="speakers">
-<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-gutter relative">
-<div class="text-center mb-10 md:mb-14">
-<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-2">Seminar Speakers</span>
-<h2 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl font-bold text-secondary mb-2">セミナー解説者
-        </h2>
-<div class="w-10 h-1 bg-primary mx-auto mb-4"></div>
-<p class="font-body-md text-body-md text-on-surface-variant">現地実務・投資・販売管理を知るメンバーが、リアルな判断材料をお届けします。</p>
-</div>
-<div class="speaker-carousel-shell">
-<button class="speaker-arrow speaker-arrow-left" type="button" data-carousel-prev aria-label="前の講師へ">
-<span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
-</button>
-<button class="speaker-arrow speaker-arrow-right" type="button" data-carousel-next aria-label="次の講師へ">
-<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
-</button>
-<div class="speaker-carousel">
-<!-- Speaker 1 -->
-<article class="speaker-slide" id="speaker-anna">
-<div class="speaker-portrait">
-<img alt="荒木 杏奈" class="w-full max-w-[280px] md:max-w-[400px] h-auto object-cover md:h-full h-full" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2wPyEnGH8n8xs03-HOqYfcYirlDbmvofqYvCJIxtAav8QfMURtf8ouEjYME6E-YjW4D9fnDEh1paBbk4KxXevP2XVN8GSdHvaWGrwwVDbWYbLneayb_tz-zvc3K-hDQhprhgOqpsaDxZIUg_kfcy8y79K6GhS8HzyIB043qs8otFwqb8OFlqVvpjcO-7nWMlN9i7s1yRinHmaL_NnWv0mf1LYrddcCUUOvEJ8du74CtQb1NkAhSwE9G5eM6bQPeRQgoHxKaEK7Ck"/>
-</div>
-<div class="speaker-copy">
-<h3 class="font-headline-xl text-headline-xl font-bold text-secondary mb-2">荒木 杏奈</h3>
-<p class="text-sm text-primary font-bold mb-6">アンナアドバイザーズ株式会社 代表取締役<br/><span class="text-xs text-on-surface-variant font-normal">（宅地建物取引士）</span></p>
-<div class="font-body-md text-body-md text-on-surface-variant mb-8 space-y-4">
-<p class="">1984年生まれ、東京都出身。 大手広告代理店セプテーニ（株）入社、その後SBIグループを経て2012年よりカンボジアの首都プノンペンの金融機関に勤務。2013年に独立し日本とカンボジアに拠点を持ち、国内・海外の国際不動産サービスを展開。</p>
-<p class="text-sm bg-surface-container-low p-4 rounded-lg border border-outline-variant/20">
-<span class="font-bold text-on-surface block mb-1">著書</span>
-        東南アジア投資のラストリゾート カンボジア (黄金律新書) 新書 幻冬舎
-      </p>
-<div class="text-xs text-on-surface-variant/80">
-        宅地建物取引士 / 宅地建物取引業 東京都知事免許(2)第99967号<br/>
-        所属団体：一般社団法人RE AGENT 理事長 / 一般社団法人東京ニュービジネス協議会(NBC) / 公益社団法人全日本不動産協会
+<section class="daiva-fv-section">
+  <div class="daiva-fv-container">
+    
+    <!-- 左側：テキストエリア -->
+    <div class="daiva-fv-content">
+      <div class="daiva-fv-badge-wrapper">
+        <span class="daiva-fv-badge">無料オンライン開催</span>
+        <span class="daiva-fv-badge">少人数限定</span>
       </div>
-</div>
-<details class="mt-auto group/details w-full">
-<summary class="w-full inline-flex items-center justify-center bg-surface text-primary border-2 border-primary font-label-sm text-label-sm font-bold py-3 px-4 rounded-lg cursor-pointer hover:bg-primary hover:text-on-primary transition-colors list-none [&amp;::-webkit-details-marker]:hidden">
-        荒木 杏奈の講演スケジュールをCheck
-        <span class="material-symbols-outlined ml-2 group-open/details:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
-</summary>
-<div class="mt-4 p-5 bg-surface-container-low rounded-lg border border-outline-variant/30 text-left shadow-inner"><h4 class="font-bold text-secondary mb-2">【東南アジア・ラグジュアリーホテル投資説明会】</h4><p class="text-sm text-on-surface-variant mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-base" data-icon="calendar_month">calendar_month</span>6月10日(水) 13:00-14:00</p><button class="w-full inline-block text-center bg-surface-variant text-on-surface-variant font-label-sm font-bold py-3 rounded-md shadow-sm cursor-not-allowed" disabled="">終了しました</button></div>
-</details>
-</div>
-</article>
-<!-- Speaker 2 -->
-<article class="speaker-slide" id="speaker-midori">
-<div class="speaker-portrait">
-<img alt="中尾 みどり" class="w-full max-w-[280px] md:max-w-[400px] h-auto object-cover aspect-[3/4] md:h-full h-full" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdSIFr9Zl4YpzXXk1QFk25m8u7g2ybKSzheqWHTGXOrfXiFYIEDXh_kBQMdIHEjNLyOodQMUEuV8Jm_xIpbf82F6FzXn0622hPIIJ2AWyTu5r2IZhU9v73MIlaXyDf1uhdwaSY-GKeRW3xywYkH-zB9dDW3dOh-AbB1JUNUyh5HTpU2zi22EwwAWTUmI-L61pINiPwdmKjzCG15HrPKyDDvk64XDVcWpQJ2kTL8tOFxeX2FaAPmwBXDZir6VdbOMCF_Qve36DT8Zk"/>
-</div>
-<div class="speaker-copy">
-<h3 class="font-headline-xl text-headline-xl font-bold text-secondary mb-2">中尾 みどり</h3>
-<p class="text-sm text-primary font-bold mb-6">アンナアドバイザーズ株式会社<br/>マネージングダイレクター</p>
-<div class="font-body-md text-body-md text-on-surface-variant mb-8 space-y-4">
-<p class="">大分県出身。現在はカンボジア・プノンペン在住。カンボジア在住12年以上。現地にて長年不動産業に従事し、日本人投資家向けのコンドミニアム売買・賃貸仲介・資産運用サポートを行う。</p>
-<p class="">これまでに累計20億円以上の不動産取引に携わり、プノンペン中心部のコンドミニアム投資を中心に、日本人のお客様の現地対応を担当している。</p>
-<p class="">現在はアンナアドバイザーズにて、カンボジア不動産の販売・マーケティング業務に携わり、物件案内や投資相談などを行っている。プライベートでは8歳の息子を育てる母でもあり、カンボジアでの生活や子育てを楽しみながら日々現地で活動中。</p>
-</div>
-<details class="mt-auto group/details w-full">
-<summary class="w-full inline-flex items-center justify-center bg-surface text-primary border-2 border-primary font-label-sm text-label-sm font-bold py-3 px-4 rounded-lg cursor-pointer hover:bg-primary hover:text-on-primary transition-colors list-none [&amp;::-webkit-details-marker]:hidden">
-        中尾 みどりの講演スケジュールをCheck
-        <span class="material-symbols-outlined ml-2 group-open/details:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
-</summary>
-<div class="mt-4 p-5 bg-surface-container-low rounded-lg border border-outline-variant/30 text-left shadow-inner"><h4 class="font-bold text-secondary mb-2">【カンボジア現地Jタワー３ショールーム中継】Zoomオンラインセミナー</h4><p class="text-sm text-on-surface-variant mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-base" data-icon="calendar_month">calendar_month</span>6月24日(水) 18:00-19:30</p><a class="w-full inline-block text-center bg-primary text-on-primary font-label-sm font-bold py-3 rounded-md shadow-md hover:bg-surface-tint hover:shadow-lg transition-all" href="#contact">申し込みはこちら</a></div>
-</details>
-</div>
-</article>
-<!-- Speaker 3 -->
-<article class="speaker-slide" id="speaker-shunsuke">
-<div class="speaker-portrait">
-<img alt="岸 隼輔" class="w-full max-w-[280px] md:max-w-[400px] h-auto object-cover aspect-[3/4] md:h-full h-full" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmq0VHzgn17GIy3SbNyitIk3PilbtlVq8xCTtZj3xFrOFyZM2-odZyYGIvFGKZL6YxWahKblwt9rJmSs2TgkhQbho4GsIUJyQaA4g-l_ZOxR5G6V-xb2lsjA47O7YHqWkxi1CQc-nVXFDdaHByUlWOTMVnbTXzUdmO0Ti6iEfh_R0AtRaaGdkrLWicOyQn8KtrOke7VEcORIPKgtJvb8AkDQq_RC8nPCw9eNDIa2ISho4FlKJ67eVo9sr75_PQoxVzQK6g_1KYUf4"/>
-</div>
-<div class="speaker-copy">
-<h3 class="font-headline-xl text-headline-xl font-bold text-secondary mb-2">岸 隼輔</h3>
-<p class="text-sm text-primary font-bold mb-6">アンナアドバイザーズ株式会社<br/>アシスタントマネージャー<br/><span class="text-xs text-on-surface-variant font-normal">セールスアシスタントマネージャー（FP2級）</span></p>
-<div class="font-body-md text-body-md text-on-surface-variant mb-8 space-y-4">
-<p class="">1995年生まれ　石川県出身。<br/>新卒で旅行スタートアップで入社し、海外OTA(Online Travel Agent)マネジャーとしてBooking.comやExpedia、Trip.comを担当。 世界遺産で有名なシェムリアップオフィスで2年以上の駐在経験を持つ。</p>
-<p class="font-bold text-secondary bg-secondary-fixed/30 p-4 rounded-lg border-l-4 border-secondary">
-        おすすめ物件の軽快な紹介が好評。現地の空気感を伝えるライブ感溢れる解説は、多くの投資家から支持を得ている。
+      
+      <h1 class="daiva-fv-title">
+        資産を「米ドル」で守り、<br>
+        <span class="daiva-fv-title-sub">成長国で増やす。</span>
+      </h1>
+      
+      <p class="daiva-fv-lead">
+        カンボジア不動産投資の真実を、プロが徹底解説。
       </p>
-</div>
-<details class="mt-auto group/details w-full">
-<summary class="w-full inline-flex items-center justify-center bg-surface text-primary border-2 border-primary font-label-sm text-label-sm font-bold py-3 px-4 rounded-lg cursor-pointer hover:bg-primary hover:text-on-primary transition-colors list-none [&amp;::-webkit-details-marker]:hidden">
-        岸 隼輔の講演スケジュールをCheck
-        <span class="material-symbols-outlined ml-2 group-open/details:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
-</summary>
-<div class="mt-4 p-5 bg-surface-container-low rounded-lg border border-outline-variant/30 text-left shadow-inner"><h4 class="font-bold text-secondary mb-2">【カンボジア不動産投資】Zoomオンラインセミナー</h4><p class="text-sm text-on-surface-variant mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-base" data-icon="calendar_month">calendar_month</span>6月20日(土) 8:00-9:30</p><a class="w-full inline-block text-center bg-primary text-on-primary font-label-sm font-bold py-3 rounded-md shadow-md hover:bg-surface-tint hover:shadow-lg transition-all" href="#contact">申し込みはこちら</a></div>
-</details>
-</div>
-</article>
-</div>
-</div>
-</div>
+      
+      <div class="daiva-fv-features">
+        <div class="daiva-fv-feature-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+          </svg>
+          <span>Zoom開催</span>
+        </div>
+        <div class="daiva-fv-feature-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span>米ドル資産形成</span>
+        </div>
+        <div class="daiva-fv-feature-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+          <span>個別面談も選択可</span>
+        </div>
+      </div>
+      
+      <div class="daiva-fv-btn-wrapper">
+        <a href="#schedule" class="daiva-fv-btn">
+          <span>無料オンラインセミナーに申し込む</span>
+          <span class="daiva-fv-btn-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 右側：正方形画像エリア -->
+    <div class="daiva-fv-image-area">
+      <img src="https://lh3.googleusercontent.com/aida/AP1WRLvcsWDFMZxs0kHyUypr1c4FjCedntLvR9fJ9HkpYaCNNQChTKMpnbMdW9W1Bs9Y6qgnJ0XTXC_GHU2T501-J6AU2w6PWWZsiYKJi6GBENxypdo06GCHBjUIcae7b3FzbitUsj_SI3B_r75H4DpJrbhh3Sl1GSc4zoJAHfs6lsvxrzfN1M1jikfv6HA3BR5zFllOs6hdIW-3IRwTnxk-EUx1IF64A6fZy4gXAdd3Cx4sRn_JQWB5CjqaN6s" alt="Phnom Penh skyline" class="daiva-fv-img">
+    </div>
+
+  </div>
 </section>
-<!-- Schedule Section -->
-<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-low" id="schedule">
-<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-gutter">
-<div class="text-center mb-12">
-<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-2">Seminar Schedule</span>
-<h2 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl font-bold text-secondary mb-2">今月のセミナースケジュール</h2>
-<div class="w-10 h-1 bg-primary mx-auto mb-4"></div>
-</div>
-<div class="max-w-4xl mx-auto space-y-4">
-<!-- Item 1 -->
-<div class="schedule-card bg-surface p-6 rounded-xl border border-outline-variant/30 shadow-sm flex flex-col md:flex-row items-center md:items-start gap-6"><div class="flex-1 w-full"><div class="flex flex-wrap items-center gap-3 mb-2"><span class="bg-secondary-fixed text-on-secondary-fixed text-xs font-bold px-2 py-1 rounded">オンライン</span><span class="text-on-surface-variant font-bold text-sm">終了</span></div><h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">【東南アジア・ラグジュアリーホテル投資説明会】</h3><p class="text-on-surface-variant text-sm flex items-center gap-2 mb-1"><span class="material-symbols-outlined text-base" data-icon="person">person</span>講師: 荒木 杏奈</p><p class="text-on-surface-variant text-sm flex items-center gap-2"><span class="material-symbols-outlined text-base" data-icon="calendar_month">calendar_month</span>6月10日(水) 13:00-14:00</p></div><div class="w-full md:w-auto mt-4 md:mt-0"><button class="inline-flex items-center justify-center w-full md:w-auto bg-surface-variant text-on-surface-variant font-bold py-3 px-8 rounded shadow-sm cursor-not-allowed" disabled="">終了</button></div></div>
-<!-- Item 2 -->
-<div class="schedule-card bg-surface p-6 rounded-xl border border-outline-variant/30 shadow-sm flex flex-col md:flex-row items-center md:items-start gap-6"><div class="flex-1 w-full"><div class="flex flex-wrap items-center gap-3 mb-2"><span class="bg-secondary-fixed text-on-secondary-fixed text-xs font-bold px-2 py-1 rounded">オンライン</span><span class="bg-primary text-on-primary font-bold text-xs px-2 py-1 rounded">受付中</span></div><h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">【カンボジア不動産投資】Zoomオンラインセミナー</h3><p class="text-on-surface-variant text-sm flex items-center gap-2 mb-1"><span class="material-symbols-outlined text-base" data-icon="person">person</span>講師: 岸 隼輔</p><p class="text-on-surface-variant text-sm flex items-center gap-2"><span class="material-symbols-outlined text-base" data-icon="calendar_month">calendar_month</span>6月20日(土) 8:00-9:30</p></div><div class="w-full md:w-auto mt-4 md:mt-0"><a class="inline-flex items-center justify-center w-full md:w-auto bg-primary text-on-primary font-bold py-3 px-8 rounded shadow-sm hover:bg-surface-tint transition-colors pulse-btn" href="#contact">詳細・申し込む</a></div></div>
-<!-- Item 3 -->
-<div class="schedule-card bg-surface p-6 rounded-xl border border-outline-variant/30 shadow-sm flex flex-col md:flex-row items-center md:items-start gap-6"><div class="flex-1 w-full"><div class="flex flex-wrap items-center gap-3 mb-2"><span class="bg-secondary-fixed text-on-secondary-fixed text-xs font-bold px-2 py-1 rounded">オンライン</span><span class="bg-primary/10 text-primary font-bold text-xs px-2 py-1 rounded">受付中</span></div><h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">【カンボジア現地Jタワー３ショールーム中継】Zoomオンラインセミナー</h3><p class="text-on-surface-variant text-sm flex items-center gap-2 mb-1"><span class="material-symbols-outlined text-base" data-icon="person">person</span>講師: 中尾 みどり</p><p class="text-on-surface-variant text-sm flex items-center gap-2"><span class="material-symbols-outlined text-base" data-icon="calendar_month">calendar_month</span>6月24日(水) 18:00-19:30</p></div><div class="w-full md:w-auto mt-4 md:mt-0"><a class="inline-flex items-center justify-center w-full md:w-auto bg-primary text-on-primary font-bold py-3 px-8 rounded shadow-sm hover:bg-surface-tint transition-colors" href="#contact">詳細・申し込む</a></div></div>
-</div>
-</div>
+
+<!-- ==========================================
+     02. 問題提起 (CHECK LIST) セクション
+     ========================================== -->
+<section class="daiva-problem-section">
+  <div class="daiva-problem-container">
+    
+    <div class="daiva-section-header">
+      <span class="daiva-section-subtitle">CHECK LIST</span>
+      <h2 class="daiva-section-title">あなたにあてはまる項目はありませんか？</h2>
+      <div class="daiva-section-line"></div>
+    </div>
+
+    <div class="daiva-problem-grid">
+      <div class="daiva-problem-item">
+        <div class="daiva-problem-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <p class="daiva-problem-text">分散投資のため、海外不動産を購入したい！</p>
+      </div>
+
+      <div class="daiva-problem-item">
+        <div class="daiva-problem-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <p class="daiva-problem-text">法人で不動産を保有、3期以上決算を終え、決算書が赤ではない！</p>
+      </div>
+
+      <div class="daiva-problem-item">
+        <div class="daiva-problem-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <p class="daiva-problem-text">利回りが下がってきたので、より利回りの高い物件を購入したい！</p>
+      </div>
+
+      <div class="daiva-problem-item">
+        <div class="daiva-problem-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <p class="daiva-problem-text">資産が株式と債券なので、不動産の保有を検討している！</p>
+      </div>
+
+      <div class="daiva-problem-item">
+        <div class="daiva-problem-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <p class="daiva-problem-text">日本円に偏っているため、米ドルを保有することを検討している！</p>
+      </div>
+    </div>
+
+    <div class="daiva-problem-summary">
+      <p class="daiva-summary-lead">日本人の資産は90％以上が円資産に偏っています</p>
+      <p class="daiva-summary-main">資産を日本円のみで保有することは、大きなリスクです。</p>
+    </div>
+
+  </div>
 </section>
-<!-- Form Section -->
-<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-bright" id="representative">
-<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-gutter">
-<div class="text-center mb-16">
-<h2 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl font-bold text-secondary mb-2">
-        アンナアドバイザーズの強み
-      </h2>
-<div class="w-10 h-1 bg-primary mx-auto mb-4"></div>
-<p class="font-body-md text-body-md text-on-surface-variant">
-        確かな実績と現地でのリアルな知見で、お客様の資産形成をサポートします。
-      </p>
-</div>
-<div class="grid md:grid-cols-2 gap-12 items-center">
-<div class="strength-photo">
-<img alt="アンナアドバイザーズ コンサルティング" class="w-full h-full object-cover" loading="lazy" decoding="async" src="https://anna-advisors.com/wp-content/uploads/2025/11/consulting-004.webp"/>
-</div>
-<div class="space-y-8">
-<div class="grid gap-6">
-<div class="strength-item flex items-start gap-4">
-<div class="strength-icon">
-<span class="material-symbols-outlined" data-icon="timeline">timeline</span>
-</div>
-<div>
-<h3 class="font-headline-md text-body-lg md:text-headline-md font-bold text-secondary mb-1">カンボジア不動産歴15年の実績</h3>
-<p class="text-on-surface-variant text-sm md:text-base">長年の経験から培った独自のネットワークと、市場の変遷を熟知した確かな目利き力があります。</p>
-</div>
-</div>
-<div class="strength-item flex items-start gap-4">
-<div class="strength-icon">
-<span class="material-symbols-outlined" data-icon="public">public</span>
-</div>
-<div>
-<h3 class="font-headline-md text-body-lg md:text-headline-md font-bold text-secondary mb-1">現地プノンペン在住5年のリアルな知見</h3>
-<p class="text-on-surface-variant text-sm md:text-base">日本からでは見えない、現地の最新トレンドや生活環境の変化をリアルタイムでお伝えします。</p>
-</div>
-</div>
-<div class="strength-item flex items-start gap-4">
-<div class="strength-icon">
-<span class="material-symbols-outlined" data-icon="domain_add">domain_add</span>
-</div>
-<div>
-<h3 class="font-headline-md text-body-lg md:text-headline-md font-bold text-secondary mb-1">日本人マネージャー常駐の自社拠点を保有</h3>
-<p class="text-on-surface-variant text-sm md:text-base">購入後の管理やトラブル対応も、現地自社オフィスの日本人スタッフが責任を持ってサポートします。</p>
-</div>
-</div>
-<div class="strength-item flex items-start gap-4">
-<div class="strength-icon">
-<span class="material-symbols-outlined" data-icon="diamond">diamond</span>
-</div>
-<div>
-<h3 class="font-headline-md text-body-lg md:text-headline-md font-bold text-secondary mb-1">自身の投資経験に基づいた誠実なアドバイス</h3>
-<p class="text-on-surface-variant text-sm md:text-base">私自身もカンボジア不動産への投資家です。リスクもメリットも包み隠さず、誠実にお話しします。</p>
-</div>
-</div>
-</div>
-<div class="bg-surface-container-low p-6 rounded-lg border-l-4 border-primary">
-<p class="font-body-lg text-body-md md:text-body-lg italic text-on-surface">
-            「カンボジアは、かつての日本のような成長のエネルギーに満ちています。皆様の大切な資産を、信頼できるパートナーとして共に守り、育てていくことが私の使命です。」
-          </p>
-<p class="text-right mt-4 font-bold text-secondary text-sm md:text-base">代表取締役 荒木 杏奈</p>
-</div>
-</div>
-</div>
-</div>
-</section><section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface" id="faq">
-<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-gutter">
-<div class="text-center mb-16">
-<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-2">FAQ</span>
-<h2 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl font-bold text-secondary mb-2">
-        よくあるご質問
-      </h2>
-<div class="w-10 h-1 bg-primary mx-auto mb-4"></div>
-<p class="font-body-md text-body-md text-on-surface-variant">
-        カンボジア不動産投資に関する疑問にお答えします。
-      </p>
-</div>
-<div class="max-w-3xl mx-auto space-y-6">
-<details class="bg-surface-container-low rounded-xl border border-outline-variant/20 group cursor-pointer">
-<summary class="p-6 flex justify-between items-center list-none [&amp;::-webkit-details-marker]:hidden">
-<div class="flex gap-4 items-start">
-<span class="font-bold text-primary text-headline-md mt-1">Q</span>
-<h3 class="font-bold text-on-surface text-body-lg">カンボジアなのに米ドルで投資ができるのですか？</h3>
-</div>
-<span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 pl-[4.5rem]">
-<p class="text-on-surface-variant text-sm md:text-base border-t border-outline-variant/10 pt-4">カンボジアは東南アジアで唯一米ドルで投資をすることが可能です。現金の80％以上が米ドル、外貨預金の90％以上が米ドルです。</p>
-</div>
-</details>
-<details class="bg-surface-container-low rounded-xl border border-outline-variant/20 group cursor-pointer">
-<summary class="p-6 flex justify-between items-center list-none [&amp;::-webkit-details-marker]:hidden">
-<div class="flex gap-4 items-start">
-<span class="font-bold text-primary text-headline-md mt-1">Q</span>
-<h3 class="font-bold text-on-surface text-body-lg">融資を利用したいと考えていますが、どうしたら良いでしょうか？</h3>
-</div>
-<span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 pl-[4.5rem]">
-<p class="text-on-surface-variant text-sm md:text-base border-t border-outline-variant/10 pt-4">個人または法人で不動産を保有している必要があります。オリックス銀行や東京スター銀行、法人の場合は日本政策金融公庫の利用も可能です。</p>
-</div>
-</details>
-<details class="bg-surface-container-low rounded-xl border border-outline-variant/20 group cursor-pointer">
-<summary class="p-6 flex justify-between items-center list-none [&amp;::-webkit-details-marker]:hidden">
-<div class="flex gap-4 items-start">
-<span class="font-bold text-primary text-headline-md mt-1">Q</span>
-<h3 class="font-bold text-on-surface text-body-lg">プレビルドの物件、利回り保証の物件を途中で売却することは可能ですか？</h3>
-</div>
-<span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 pl-[4.5rem]">
-<p class="text-on-surface-variant text-sm md:text-base border-t border-outline-variant/10 pt-4">需要によりますが、買い手が見つかれば可能です。完成前に売却してキャピタルゲインを得られた方もいらっしゃいます。</p>
-</div>
-</details>
-<details class="bg-surface-container-low rounded-xl border border-outline-variant/20 group cursor-pointer">
-<summary class="p-6 flex justify-between items-center list-none [&amp;::-webkit-details-marker]:hidden">
-<div class="flex gap-4 items-start">
-<span class="font-bold text-primary text-headline-md mt-1">Q</span>
-<h3 class="font-bold text-on-surface text-body-lg">不動産が完成しないケースはありますか？</h3>
-</div>
-<span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 pl-[4.5rem]">
-<p class="text-on-surface-variant text-sm md:text-base border-t border-outline-variant/10 pt-4">弊社がご案内している物件は実績のある開発会社が多く、これまで納期に遅れたことはございません。</p>
-</div>
-</details>
-<details class="bg-surface-container-low rounded-xl border border-outline-variant/20 group cursor-pointer">
-<summary class="p-6 flex justify-between items-center list-none [&amp;::-webkit-details-marker]:hidden">
-<div class="flex gap-4 items-start">
-<span class="font-bold text-primary text-headline-md mt-1">Q</span>
-<h3 class="font-bold text-on-surface text-body-lg">カンボジア不動産投資のリスクを教えていただけますか？</h3>
-</div>
-<span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 pl-[4.5rem]">
-<p class="text-on-surface-variant text-sm md:text-base border-t border-outline-variant/10 pt-4">プレビルドのリスク、開発会社の倒産リスク、カントリーリスクの3つが考えられます。これらを考慮した上での投資判断が必要です。</p>
-</div>
-</details>
-</div>
-</div>
+
+<!-- ==========================================
+     03. 本セミナーで学べること (PROGRAM) セクション
+     ========================================== -->
+<section class="daiva-learn-section">
+  <div class="daiva-learn-container">
+
+    <div class="daiva-section-header">
+      <span class="daiva-section-subtitle">PROGRAM</span>
+      <h2 class="daiva-section-title">本セミナーで学べること</h2>
+      <div class="daiva-section-line"></div>
+    </div>
+
+    <div class="daiva-learn-story-wrapper">
+      <div class="daiva-learn-row">
+        <div class="daiva-learn-image-area">
+          <img src="https://lh3.googleusercontent.com/aida/AP1WRLvcsWDFMZxs0kHyUypr1c4FjCedntLvR9fJ9HkpYaCNNQChTKMpnbMdW9W1Bs9Y6qgnJ0XTXC_GHU2T501-J6AU2w6PWWZsiYKJi6GBENxypdo06GCHBjUIcae7b3FzbitUsj_SI3B_r75H4DpJrbhh3Sl1GSc4zoJAHfs6lsvxrzfN1M1jikfv6HA3BR5zFllOs6hdIW-3IRwTnxk-EUx1IF64A6fZy4gXAdd3Cx4sRn_JQWB5CjqaN6s" alt="プノンペンの経済成長" class="daiva-learn-img">
+        </div>
+        <div class="daiva-learn-text-area">
+          <span class="daiva-learn-num">01</span>
+          <h3 class="daiva-learn-item-title">なぜ今「カンボジア」なのか？</h3>
+          <p class="daiva-learn-item-desc">平均年齢27歳という圧倒的な人口ボーナス期を迎え、東南アジア屈指の経済成長を続けるカンボジア。そのポテンシャルと、今投資すべき本当の理由をデータとともに紐解きます。</p>
+        </div>
+      </div>
+
+      <div class="daiva-learn-row">
+        <div class="daiva-learn-image-area">
+          <img src="https://lh3.googleusercontent.com/aida/AP1WRLvcsWDFMZxs0kHyUypr1c4FjCedntLvR9fJ9HkpYaCNNQChTKMpnbMdW9W1Bs9Y6qgnJ0XTXC_GHU2T501-J6AU2w6PWWZsiYKJi6GBENxypdo06GCHBjUIcae7b3FzbitUsj_SI3B_r75H4DpJrbhh3Sl1GSc4zoJAHfs6lsvxrzfN1M1jikfv6HA3BR5zFllOs6hdIW-3IRwTnxk-EUx1IF64A6fZy4gXAdd3Cx4sRn_JQWB5CjqaN6s" alt="米ドル建て資産" class="daiva-learn-img">
+        </div>
+        <div class="daiva-learn-text-area">
+          <span class="daiva-learn-num">02</span>
+          <h3 class="daiva-learn-item-title">米ドル建てで資産を守る仕組み</h3>
+          <p class="daiva-learn-item-desc">カンボジア不動産投資の最大の強みは「米ドル建て」であること。新興国の高利回りを享受しながら、世界最強の基軸通貨である米ドルで資産を保有するリスク分散術を解説します。</p>
+        </div>
+      </div>
+
+      <div class="daiva-learn-row">
+        <div class="daiva-learn-image-area">
+          <img src="https://lh3.googleusercontent.com/aida/AP1WRLvcsWDFMZxs0kHyUypr1c4FjCedntLvR9fJ9HkpYaCNNQChTKMpnbMdW9W1Bs9Y6qgnJ0XTXC_GHU2T501-J6AU2w6PWWZsiYKJi6GBENxypdo06GCHBjUIcae7b3FzbitUsj_SI3B_r75H4DpJrbhh3Sl1GSc4zoJAHfs6lsvxrzfN1M1jikfv6HA3BR5zFllOs6hdIW-3IRwTnxk-EUx1IF64A6fZy4gXAdd3Cx4sRn_JQWB5CjqaN6s" alt="現地のリアルな市場" class="daiva-learn-img">
+        </div>
+        <div class="daiva-learn-text-area">
+          <span class="daiva-learn-num">03</span>
+          <h3 class="daiva-learn-item-title">ネットには出ない「現地のリアルな市場」</h3>
+          <p class="daiva-learn-item-desc">現地に深く根を張るアドバイザーだからこそ知る、現在のリアルな需給バランスや、騙されないための物件選びの基準など、表に出てこない一次情報をお伝えします。</p>
+        </div>
+      </div>
+
+      <div class="daiva-learn-row">
+        <div class="daiva-learn-image-area">
+          <img src="https://lh3.googleusercontent.com/aida/AP1WRLvcsWDFMZxs0kHyUypr1c4FjCedntLvR9fJ9HkpYaCNNQChTKMpnbMdW9W1Bs9Y6qgnJ0XTXC_GHU2T501-J6AU2w6PWWZsiYKJi6GBENxypdo06GCHBjUIcae7b3FzbitUsj_SI3B_r75H4DpJrbhh3Sl1GSc4zoJAHfs6lsvxrzfN1M1jikfv6HA3BR5zFllOs6hdIW-3IRwTnxk-EUx1IF64A6fZy4gXAdd3Cx4sRn_JQWB5CjqaN6s" alt="アフターサポート" class="daiva-learn-img">
+        </div>
+        <div class="daiva-learn-text-area">
+          <span class="daiva-learn-num">04</span>
+          <h3 class="daiva-learn-item-title">購入から売却までのシームレスなサポート</h3>
+          <p class="daiva-learn-item-desc">「買って終わり」にさせないために。現地の管理体制、賃貸付けの戦略、そして将来的な出口（売却）にいたるまで、長期的なパートナーとしての支援体制を公開します。</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
-<section class="py-section-gap-mobile md:py-section-gap-desktop bg-white" id="contact">
-<div class="w-full">
-<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-gutter mb-10">
-<div class="text-center mb-10">
-<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-2">Entry</span>
-<h2 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl font-bold text-secondary mb-2">
-        セミナー・個別相談のお申し込み
-      </h2>
-<div class="w-10 h-1 bg-primary mx-auto mb-4"></div>
-</div>
-<div class="font-body-md text-body-md md:text-body-lg text-on-surface-variant leading-relaxed space-y-5">
-<p>アンナアドバイザーズは、カンボジアで多くの売買や転売、賃貸管理の実績がございます。</p>
-<p>また、国内不動産を保有されている方、法人を所有されている方は、日本の金融機関から融資を受けることができる可能性がございます。<br/>ご興味をお持ちいただいた方は、ぜひセミナーにご参加ください。</p>
-<p>個別面談をご希望の方は、下記フォームより「個別面談（日程は別途調整）」をお選びください。</p>
-</div>
-<div class="grid md:grid-cols-3 gap-4 mt-8">
-<div class="flex items-start gap-3 bg-surface-container-low p-4 rounded-lg">
-<span class="material-symbols-outlined text-primary shrink-0" aria-hidden="true">schedule</span>
-<p class="text-sm text-on-surface-variant"><span class="block font-bold text-on-surface mb-1">オンラインで参加</span>Zoomでご自宅から参加できます。</p>
-</div>
-<div class="flex items-start gap-3 bg-surface-container-low p-4 rounded-lg">
-<span class="material-symbols-outlined text-primary shrink-0" aria-hidden="true">real_estate_agent</span>
-<p class="text-sm text-on-surface-variant"><span class="block font-bold text-on-surface mb-1">個別面談も受付</span>ご状況に合わせた相談も可能です。</p>
-</div>
-<div class="flex items-start gap-3 bg-surface-container-low p-4 rounded-lg">
-<span class="material-symbols-outlined text-primary shrink-0" aria-hidden="true">lock</span>
-<p class="text-sm text-on-surface-variant"><span class="block font-bold text-on-surface mb-1">情報連携済み</span>送信内容は社内の管理フローに連携されます。</p>
-</div>
-</div>
-</div>
-<div class="seminar-form-embed">
-<iframe
-  title="セミナー申し込みフォーム"
-  src="https://anna-advisors.com/seminar-form/"
-  width="100%"
-  height="3600"
-  type="text/html"
-  frameborder="0"
-  allowTransparency="true"
-  loading="lazy"
-  scrolling="no"
-  style="border: 0; display: block; overflow: hidden"
-></iframe>
-</div></div></section></main>
+
+<!-- ==========================================
+     04. 解説者紹介 (SPEAKERS) セクション
+     ========================================== -->
+<section class="daiva-speaker-section" id="speakers">
+  <div class="daiva-speaker-container">
+    
+    <div class="daiva-section-header">
+      <span class="daiva-section-subtitle">SEMINAR SPEAKERS</span>
+      <h2 class="daiva-section-title">セミナー解説者</h2>
+      <div class="daiva-section-line"></div>
+      <p class="daiva-section-lead">現地実務・投資・販売管理を知るメンバーが、リアルな判断材料をお届けします。</p>
+    </div>
+
+    <div class="daiva-speaker-grid">
+      
+      <!-- Speaker 1 -->
+      <article class="daiva-speaker-card" id="speaker-anna">
+        <div class="daiva-speaker-portrait">
+          <img alt="荒木 杏奈" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2wPyEnGH8n8xs03-HOqYfcYirlDbmvofqYvCJIxtAav8QfMURtf8ouEjYME6E-YjW4D9fnDEh1paBbk4KxXevP2XVN8GSdHvaWGrwwVDbWYbLneayb_tz-zvc3K-hDQhprhgOqpsaDxZIUg_kfcy8y79K6GhS8HzyIB043qs8otFwqb8OFlqVvpjcO-7nWMlN9i7s1yRinHmaL_NnWv0mf1LYrddcCUUOvEJ8du74CtQb1NkAhSwE9G5eM6bQPeRQgoHxKaEK7Ck"/>
+        </div>
+        <div class="daiva-speaker-copy">
+          <h3 class="daiva-speaker-name">荒木 杏奈</h3>
+          <p class="daiva-speaker-title">アンナアドバイザーズ株式会社 代表取締役<br><span class="daiva-speaker-license">（宅地建物取引士）</span></p>
+          
+          <div class="daiva-speaker-bio">
+            <p>1984年生まれ、東京都出身。 大手広告代理店セプテーニ（株）入社、その後SBIグループを経て2012年よりカンボジアの首都プノンペンの金融機関に勤務。2013年に独立し日本とカンボジアに拠点を持ち、国内・海外の国際不動産サービスを展開。</p>
+            <div class="daiva-speaker-book">
+              <span class="daiva-book-label">【著書】</span>東南アジア投資のラストリゾート カンボジア (黄金律新書) 新書 幻冬舎
+            </div>
+            <div class="daiva-speaker-notes">
+              宅地建物取引士 / 宅地建物取引業 東京都知事免許(2)第99967号<br>
+              所属団体：一般社団法人RE AGENT 理事長 / 一般社団法人東京ニュービジネス協議会(NBC) / 公益社団法人全日本不動産協会
+            </div>
+          </div>
+          
+          <div class="daiva-speaker-schedule">
+            <h4 class="daiva-schedule-title">【東南アジア・ラグジュアリーホテル投資説明会】</h4>
+            <p class="daiva-schedule-date">6月10日(水) 13:00-14:00</p>
+            <span class="daiva-status-disabled">終了しました</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Speaker 2 -->
+      <article class="daiva-speaker-card" id="speaker-midori">
+        <div class="daiva-speaker-portrait">
+          <img alt="中尾 みどり" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdSIFr9Zl4YpzXXk1QFk25m8u7g2ybKSzheqWHTGXOrfXiFYIEDXh_kBQMdIHEjNLyOodQMUEuV8Jm_xIpbf82F6FzXn0622hPIIJ2AWyTu5r2IZhU9v73MIlaXyDf1uhdwaSY-GKeRW3xywYkH-zB9dDW3dOh-AbB1JUNUyh5HTpU2zi22EwwAWTUmI-L61pINiPwdmKjzCG15HrPKyDDvk64XDVcWpQJ2kTL8tOFxeX2FaAPmwBXDZir6VdbOMCF_Qve36DT8Zk"/>
+        </div>
+        <div class="daiva-speaker-copy">
+          <h3 class="daiva-speaker-name">中尾 みどり</h3>
+          <p class="daiva-speaker-title">アンナアドバイザーズ株式会社<br>マネージングダイレクター</p>
+          
+          <div class="daiva-speaker-bio">
+            <p>大分県出身。現在はカンボジア・プノンペン在住。カンボジア在住12年以上。現地にて長年不動産業に従事し、日本人投資家向けのコンドミニアム売買・賃貸仲介・資産運用サポートを行う。</p>
+            <p>これまでに累計20億円以上の不動産取引に携わり、プノンペン中心部のコンドミニアム投資を中心に、日本人のお客様の現地対応を担当している。</p>
+            <p>現在はアンナアドバイザーズにて、カンボジア不動産の販売・マーケティング業務に携わり、物件案内や投資相談などを行っている。プライベートでは8歳の息子を育てる母でもあり、カンボジアでの生活や子育てを楽しみながら日々現地で活動中。</p>
+          </div>
+          
+          <div class="daiva-speaker-schedule">
+            <h4 class="daiva-schedule-title">【カンボジア現地Jタワー３ショールーム中継】Zoomセミナー</h4>
+            <p class="daiva-schedule-date">6月24日(水) 18:00-19:30</p>
+            <a class="daiva-schedule-btn" href="#schedule">申し込みはこちら →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Speaker 3 -->
+      <article class="daiva-speaker-card" id="speaker-shunsuke">
+        <div class="daiva-speaker-portrait">
+          <img alt="岸 隼輔" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmq0VHzgn17GIy3SbNyitIk3PilbtlVq8xCTtZj3xFrOFyZM2-odZyYGIvFGKZL6YxWahKblwt9rJmSs2TgkhQbho4GsIUJyQaA4g-l_ZOxR5G6V-xb2lsjA47O7YHqWkxi1CQc-nVXFDdaHByUlWOTMVnbTXzUdmO0Ti6iEfh_R0AtRaaGdkrLWicOyQn8KtrOke7VEcORIPKgtJvb8AkDQq_RC8nPCw9eNDIa2ISho4FlKJ67eVo9sr75_PQoxVzQK6g_1KYUf4"/>
+        </div>
+        <div class="daiva-speaker-copy">
+          <h3 class="daiva-speaker-name">岸 隼輔</h3>
+          <p class="daiva-speaker-title">アンナアドバイザーズ株式会社<br>アシスタントマネージャー<br><span class="daiva-speaker-license">セールスアシスタントマネージャー（FP2級）</span></p>
+          
+          <div class="daiva-speaker-bio">
+            <p>1995年生まれ 石川県出身。<br>新卒で旅行スタートアップに入社し、海外OTA(Online Travel Agent)マネジャーとしてBooking.comやExpedia、Trip.comを担当。 世界遺産で有名なシェムリアップオフィスで2年以上の駐在経験を持つ。</p>
+            <div class="daiva-speaker-highlight">
+              おすすめ物件の軽快な紹介が好評。現地の空気感を伝えるライブ感溢れる解説は、多くの投資家から支持を得ている。
+            </div>
+          </div>
+          
+          <div class="daiva-speaker-schedule">
+            <h4 class="daiva-schedule-title">【カンボジア不動産投資】Zoomオンラインセミナー</h4>
+            <p class="daiva-schedule-date">6月20日(土) 8:00-9:30</p>
+            <a class="daiva-schedule-btn" href="#schedule">申し込みはこちら →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     4.5 【完全確定版】PREMIUM PORTFOLIO セクション
+     大和ハウス専用ネームスペース属性を実装
+     ========================================== -->
+<section class="daiva-fund-section" data-theme="daiva-lux">
+  <div class="daiva-fund-container">
+    
+    <div class="daiva-section-header">
+      <span class="daiva-section-subtitle">PREMIUM PORTFOLIO</span>
+      <h2 class="daiva-section-title">資産を託すに値する、2つの至高なる選択肢</h2>
+      <div class="daiva-section-line"></div>
+      <p class="daiva-section-lead">アンナアドバイザーズが富裕層の皆様へお届けする、厳選された最高峰のアセット。</p>
+    </div>
+
+    <!-- ─── アセット 01：HMD Asia（ファンド投資） ─── -->
+    <div class="daiva-asset-row">
+      <div class="daiva-asset-visual">
+        <img src="https://anna-advisors.com/wp-content/uploads/2025/12/c34f2910313652c00e7f4e1c2bf999da.webp" alt="HMD Asia Premium Asset">
+      </div>
+      <div class="daiva-asset-details">
+        <div class="asset-meta-head">
+          <span class="asset-num">01</span>
+          <span class="asset-category">HOTEL INVESTMENT</span>
+        </div>
+        <h3 class="asset-main-title">HMD Asia プレミアム・ファンド</h3>
+        
+        <!-- 金融庁許可のバッジ（ライトグレーのミニマル四角枠） -->
+        <div class="fund-regulatory-badge type-landmark">
+          <span class="badge-text">日本の金融庁許可取得済（適格機関投資家等特例業務等に基づく適正開示）</span>
+        </div>
+
+        <p class="asset-description">
+          世界的な建築デザイナーBill Bensley氏らと共に、東南アジア屈指の一等地で最高峰のブティックホテルを所有・運営する不動産トップランナー。日本の厳格な金融商品取引法に則った、極めて透明性の高い米ドル建て運用を提供します。
+        </p>
+        <ul class="asset-bullets-list">
+          <li>米ドル建てによる確かな資産保全と、世界水準の複利効果</li>
+          <li>世界の富裕層が絶賛する最高峰リゾート群へのプレミアムアセット投資</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ─── HMD Asia 開発・運営実績（自動無限ループ・横伸び仕様） ─── -->
+    <div class="daiva-slider-wrapper">
+      <h4 class="slider-section-title">HMD Asia 開発・運営実績</h4>
+      <div class="daiva-infinite-loop-container">
+        <div class="daiva-loop-track">
+          <!-- オリジナル 6枚 -->
+          <div class="hotel-slide-card">
+            <div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2025/12/000414172404092c1a8f7a4cf325e3f9.webp" alt="Shinta Mani Wild"></div>
+            <div class="hotel-slide-info"><h5 class="hotel-real-name">Shinta Mani Wild</h5><p class="hotel-real-meta">A Bensley Collection / 最高峰ラグジュアリーテントリゾート</p></div>
+          </div>
+          <div class="hotel-slide-card">
+            <div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2025/12/8d383e368de6706ff70cc23dde15c391.webp" alt="Shinta Mani Angkor"></div>
+            <div class="hotel-slide-info"><h5 class="hotel-real-name">Shinta Mani Angkor</h5><p class="hotel-real-meta">& Bensley Collection Pool Villas / 極上の意匠空間</p></div>
+          </div>
+          <div class="hotel-slide-card">
+            <div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2025/12/6e19ed426f035d410ab8b5b5147ceb5a.webp" alt="Park Hyatt Siem Reap"></div>
+            <div class="hotel-slide-info"><h5 class="hotel-real-name">Park Hyatt Siem Reap</h5><p class="hotel-real-meta">世界の一流が認める、中心部を代表する傑作5つ星ホテル</p></div>
+          </div>
+          <div class="hotel-slide-card">
+            <div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2025/12/da8bf7d80c6ad1b3122c655f3178bb43.webp" alt="La Résidence Phou Vao"></div>
+            <div class="hotel-slide-info"><h5 class="hotel-real-name">La Résidence Phou Vao</h5><p class="hotel-real-meta">Belmondによる、ルアンパバーンの丘の上の隠れ家リゾート</p></div>
+          </div>
+          <div class="hotel-slide-card">
+            <div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2025/12/a4af48294b778e2460e0e8a7f1d6c9da.webp" alt="JATI"></div>
+            <div class="hotel-slide-info"><h5 class="hotel-real-name">JATI</h5><p class="hotel-real-meta">大自然とシームレスに調和するハイエンドプロジェクト</p></div>
+          </div>
+          <div class="hotel-slide-card">
+            <div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2026/04/hmd-benefit-01.webp" alt="TRIBE"></div>
+            <div class="hotel-slide-info"><h5 class="hotel-real-name">TRIBE</h5><p class="hotel-real-meta">ミレニアル世代の富裕層を惹きつける、都会的デザインホテル</p></div>
+          </div>
+          <!-- クローン 6枚 -->
+          <div class="hotel-slide-card" aria-hidden="true">
+            <div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2025/12/000414172404092c1a8f7a4cf325e3f9.webp" alt=""></div>
+            <div class="hotel-slide-info"><h5 class="hotel-real-name">Shinta Mani Wild</h5><p class="hotel-real-meta">A Bensley Collection / 最高峰ラグジュアリーテントリゾート</p></div>
+          </div>
+          <div class="hotel-slide-card" aria-hidden="true">
+            <div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2025/12/8d383e368de6706ff70cc23dde15c391.webp" alt=""></div>
+            <div class="hotel-slide-info"><h5 class="hotel-real-name">Shinta Mani Angkor</h5><p class="hotel-real-meta">& Bensley Collection Pool Villas / 極上の意匠空間</p></div>
+          </div>
+          <div class="hotel-slide-card" aria-hidden="true">
+            <div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2025/12/6e19ed426f035d410ab8b5b5147ceb5a.webp" alt=""></div>
+            <div class="hotel-slide-info"><h5 class="hotel-real-name">Park Hyatt Siem Reap</h5><p class="hotel-real-meta">世界の一流が認める、中心部を代表する傑作5つ星ホテル</p></div>
+          </div>
+          <div class="hotel-slide-card" aria-hidden="true">
+            <div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2025/12/da8bf7d80c6ad1b3122c655f3178bb43.webp" alt=""></div>
+            <div class="hotel-slide-info"><h5 class="hotel-real-name">La Résidence Phou Vao</h5><p class="hotel-real-meta">Belmondによる、ルアンパバーンの丘の上の隠れ家リゾート</p></div>
+          </div>
+          <div class="hotel-slide-card" aria-hidden="true">
+            <div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2025/12/a4af48294b778e2460e0e8a7f1d6c9da.webp" alt=""></div>
+            <div class="hotel-slide-info"><h5 class="hotel-real-name">JATI</h5><p class="hotel-real-meta">大自然とシームレスに調和するハイエンドプロジェクト</p></div>
+          </div>
+          <div class="hotel-slide-card" aria-hidden="true">
+            <div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2026/04/hmd-benefit-01.webp" alt=""></div>
+            <div class="hotel-slide-info"><h5 class="hotel-real-name">TRIBE</h5><p class="hotel-real-meta">ミレニアル世代の富裕層を惹きつける、都会的デザインホテル</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── アセット 02：J-Tower 3（ランドマーク不動産投資） ─── -->
+    <div class="daiva-asset-row type-reverse">
+      <div class="daiva-asset-visual">
+        <img src="https://anna-advisors.com/wp-content/uploads/2026/03/b69bff58151a221ccd20adf88d7b3e10.webp" alt="J-Tower 3 外観メイン">
+      </div>
+      <div class="daiva-asset-details">
+        <div class="asset-meta-head">
+          <span class="asset-num">02</span>
+          <span class="asset-category">LANDMARK RESIDENCE</span>
+        </div>
+        <h3 class="asset-main-title">J-Tower 3（ジェイタワー3）</h3>
+        
+        <!-- 【四角を2つに分離】ゴールドの直角ミニマル枠で個別に括る美しい構成 -->
+        <div class="fund-regulatory-badge">
+          <span class="badge-text">・カンボジア最高層77階</span>
+        </div>
+        <div class="fund-regulatory-badge">
+          <span class="badge-text">・建物高333m</span>
+        </div>
+
+        <p class="asset-description">
+          過去4棟の確かな開発実績を誇る、信頼の日系開発会社によるプレミアムプロジェクト。首都プノンペンの中心部にそびえ立つ、地上77階の富裕層向けファミリータイプ・コンドミニアムです。高級品質と優れた住宅デザインを極限まで追求した、まさにカンボジア不動産の頂点に君臨するアセットです。
+        </p>
+        <p class="asset-description">
+          政府機関や名門教育機関、大手銀行、イオンモール等が至近に揃う外国人駐在員にも極めて人気の高い好立地。スカイプールやスカイバー、フィットネスジムに加え、日系ならではの大浴場やサウナも完備し、圧倒的な実需価値を誇ります。
+        </p>
+
+        <!-- Montserratフォント対応の数値セクション -->
+        <div class="daiva-j-metrics">
+          <div class="metric-box">
+            <span class="metric-label">想定利回り</span>
+            <span class="metric-val">11<span class="metric-unit">%</span></span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-label">平米単価（他物件の約50%）</span>
+            <span class="metric-val"><span class="metric-unit-front">$</span>1,850<span class="metric-unit">〜</span></span>
+          </div>
+        </div>
+
+        <ul class="asset-bullets-list">
+          <li>安心のオール日系開発体制による、過去4棟におよぶ盤石の竣工実績</li>
+          <li>スカイプール・スカイバー・大浴場・サウナ完備の圧倒的な邸宅クオリティ</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ─── J-Tower 3 間取り・ポートフォリオ（写真のみ・縦横ダブル伸縮ループ仕様） ─── -->
+    <div class="daiva-slider-wrapper">
+      <h4 class="slider-section-title">J-Tower 3 間取り・ポートフォリオ</h4>
+      <div class="daiva-infinite-loop-container">
+        <div class="daiva-loop-track track-2">
+          <!-- オリジナル 7枚 -->
+          <div class="hotel-slide-card"><div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2023/03/1-5.png" alt="J-Tower3 ポートフォリオ1"></div></div>
+          <div class="hotel-slide-card"><div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2023/03/2-5.png" alt="J-Tower3 ポートフォリオ2"></div></div>
+          <div class="hotel-slide-card"><div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2023/03/3-4.png" alt="J-Tower3 ポートフォリオ3"></div></div>
+          <div class="hotel-slide-card"><div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2023/03/13faceba686383afb487a4090ee8fad1.png" alt="J-Tower3 ポートフォリオ4"></div></div>
+          <div class="hotel-slide-card"><div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2023/03/8cfb7d98ac8bbfa13aa334fa2ac920df.png" alt="J-Tower3 ポートフォリオ5"></div></div>
+          <div class="hotel-slide-card"><div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2023/03/f4fcf1951ee0af3fdec6abd2b19101a4.png" alt="J-Tower3 ポートフォリオ6"></div></div>
+          <div class="hotel-slide-card"><div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2023/03/1-5.png" alt="J-Tower3 ポートフォリオ7"></div></div>
+          <!-- クローン 7枚 -->
+          <div class="hotel-slide-card" aria-hidden="true"><div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2023/03/1-5.png" alt=""></div></div>
+          <div class="hotel-slide-card" aria-hidden="true"><div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2023/03/2-5.png" alt=""></div></div>
+          <div class="hotel-slide-card" aria-hidden="true"><div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2023/03/3-4.png" alt=""></div></div>
+          <div class="hotel-slide-card" aria-hidden="true"><div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2023/03/13faceba686383afb487a4090ee8fad1.png" alt=""></div></div>
+          <div class="hotel-slide-card" aria-hidden="true"><div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2023/03/8cfb7d98ac8bbfa13aa334fa2ac920df.png" alt=""></div></div>
+          <div class="hotel-slide-card" aria-hidden="true"><div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2023/03/f4fcf1951ee0af3fdec6abd2b19101a4.png" alt=""></div></div>
+          <div class="hotel-slide-card" aria-hidden="true"><div class="hotel-slide-img-box"><img src="https://anna-advisors.com/wp-content/uploads/2023/03/1-5.png" alt=""></div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================
+     05. セミナー申し込みフォームエリア
+     ========================================== -->
+<div id="contact"></div> <!-- スマホCTAボタンのジャンプ先ID -->
+
+<section class="daiva-form-section">
+  <div class="daiva-form-container">
+    
+    <div class="seminar-form-embed">
+      <iframe
+        title="セミナー申し込みフォーム"
+        src="https://anna-advisors.com/seminar-form/"
+        width="100%"
+        height="3600"
+        type="text/html"
+        frameborder="0"
+        allowTransparency="true"
+        loading="lazy"
+        scrolling="no"
+        style="border: 0; display: block; overflow: hidden;"
+      ></iframe>
+    </div>
+
+  </div>
+</section>
+
+</main> <!-- メインコンテンツの終了 -->
+
 <!-- Sticky Bottom CTA (Mobile Only) -->
-<div class="fixed bottom-0 left-0 w-full bg-surface-dark/95 p-4 z-50 md:hidden border-t border-outline-variant/20 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] backdrop-blur">
-<a class="flex items-center justify-center gap-2 w-full bg-primary text-on-primary font-bold py-3 rounded pulse-btn" href="#contact" aria-label="セミナー申し込みフォームへ移動">
-<span class="material-symbols-outlined text-base" aria-hidden="true">edit_square</span>
+<!-- Sticky Bottom CTA (PC・スマホ両対応版) -->
+<!-- 「md:hidden」を消し、「max-w-md mx-auto left-1/2 -translate-x-1/2 bottom-4 rounded-lg」を追加することで、PCでは下部中央にフワッと浮く上品なデザインになります。スマホでは横いっぱいにフィットします。 -->
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md p-4 z-50 border border-outline-variant/20 shadow-[0_-4px_10px_rgba(0,0,0,0.15)] backdrop-blur bg-surface-dark/95 sm:bottom-4 sm:rounded-xl">
+  <a class="flex items-center justify-center gap-2 w-full bg-primary text-on-primary font-bold py-3 rounded-lg pulse-btn" href="#contact" aria-label="セミナー申し込みフォームへ移動">
+    <span class="material-symbols-outlined text-base" aria-hidden="true">edit_square</span>
     無料セミナーに申し込む
   </a>
 </div>
-<script>
-  (() => {
-    const carousel = document.querySelector(".speaker-carousel");
-    const slides = [...document.querySelectorAll(".speaker-slide")];
-    const prev = document.querySelector("[data-carousel-prev]");
-    const next = document.querySelector("[data-carousel-next]");
 
-    if (!carousel || !slides.length || !prev || !next) return;
-
-    const currentIndex = () => {
-      const center = carousel.scrollLeft + carousel.clientWidth / 2;
-      return slides.reduce((closest, slide, index) => {
-        const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
-        const distance = Math.abs(center - slideCenter);
-        return distance < closest.distance ? { index, distance } : closest;
-      }, { index: 0, distance: Infinity }).index;
-    };
-
-    const goTo = (index) => {
-      const target = slides[(index + slides.length) % slides.length];
-      carousel.scrollTo({ left: target.offsetLeft - carousel.offsetLeft, behavior: "smooth" });
-    };
-
-    prev.addEventListener("click", () => goTo(currentIndex() - 1));
-    next.addEventListener("click", () => goTo(currentIndex() + 1));
-  })();
-</script>
-</body></html>
+<!-- カルーセル制御JavaScript -->
