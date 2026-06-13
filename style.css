@@ -73,7 +73,7 @@
 }
 
 .daiva-fv-content {
-  flex: 1.2; /* 横幅を広げて改行の器に余裕を持たせる */
+  flex: 1.2;
   color: #1a1a1a;
 }
 
@@ -92,14 +92,14 @@
 }
 
 .daiva-fv-title {
-  font-size: 2.8rem; /* ほんの少しシャープにして収まりを極限まで綺麗に */
+  font-size: 2.8rem;
   font-weight: 300;
   line-height: 1.5;
   letter-spacing: 0.12em;
   margin: 0 0 24px 0;
 }
 
-/* 改行をピシッと2行に固定する魔法 */
+/* 2行固定・改行禁止の適用 */
 .daiva-fv-title-line {
   display: block;
   white-space: nowrap;
@@ -528,7 +528,7 @@
   margin: 0 0 20px 0;
 }
 
-/* J-Towerスペック枠の横並び親コンテナ */
+/* J-Tower 特選スペック枠：美しい横並びコンテナグループ */
 .daiva-fund-section[data-theme="daiva-lux"] .daiva-badge-inline-group {
   display: flex;
   gap: 16px;
@@ -546,7 +546,7 @@
   border-radius: 0; 
 }
 
-/* 通常のバッジ属性（左側アセット等） */
+/* 通常の四角枠（HMD Asia等の単体枠） */
 .daiva-fund-section[data-theme="daiva-lux"] .fund-regulatory-badge {
   display: block; 
   border: 1px solid rgba(188, 156, 78, 0.4); 
@@ -656,7 +656,7 @@
 }
 
 /* ==========================================
-   自動無限ループ
+   自動無限ループ（ギャラリー）
    ========================================== */
 .daiva-fund-section[data-theme="daiva-lux"] .daiva-slider-wrapper {
   border-top: 1px solid rgba(255,255,255,0.05);
@@ -786,8 +786,15 @@
   100% { transform: translateX(calc(-50% - 10px)); }
 }
 
+/* ➔ 【バグ対策・新設】スマホ閲覧時にフォーム最下部が千切れる現象をブロック */
+@media (max-width: 767px) {
+  .daiva-form-iframe {
+    height: 3400px !important; /* スマホのみ高さを自動拡張 */
+  }
+}
+
 /* ==========================================
-   レスポンシブ
+   レスポンシブ (大枠)
    ========================================== */
 @media (max-width: 992px) {
   .daiva-fv-container {
@@ -802,7 +809,7 @@
     font-size: 2rem;
   }
   .daiva-fv-title-line {
-    white-space: normal; /* スマホでは自動折り返しを許可 */
+    white-space: normal; /* スマホ画面では横幅に合わせ綺麗に自動折り返し */
   }
   .daiva-problem-grid, .daiva-speaker-grid {
     grid-template-columns: 1fr;
