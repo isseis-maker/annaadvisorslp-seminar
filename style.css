@@ -854,3 +854,127 @@
     gap: 10px;
   }
 }
+
+/* ==========================================
+   04.9 よくある質問（Q&A）デザイン
+   ========================================== */
+.daiva-faq-section {
+  background-color: #fcfbfa; /* 静寂を感じさせる仄かなトープ・グレー */
+  padding: 100px 0;
+  width: 100%;
+}
+
+.daiva-faq-container {
+  max-width: 900px; /* 読みやすさを追求したナロー幅 */
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.daiva-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 60px;
+}
+
+.daiva-faq-item {
+  background-color: #ffffff;
+  border: 1px solid #eeeae4;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.01);
+}
+
+/* 質問エリア (Q) */
+.daiva-faq-q {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.faq-label-q {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #bc9c4e; /* ダイワハウス・ゴールド */
+  line-height: 1;
+}
+
+.faq-text-q {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* 回答エリア (A) */
+.daiva-faq-a {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed #eeeae4; /* 上品なセパレーター */
+}
+
+.faq-label-a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #111111;
+  line-height: 1;
+}
+
+.faq-text-a {
+  font-size: 13.5px;
+  color: #444444;
+  margin: 0;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* FAQ下部のCTAボタン制御 */
+.daiva-faq-cta-wrapper {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.daiva-faq-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border: 1px solid #bc9c4e; /* ゴールドの極細フレーム */
+  text-decoration: none;
+  padding: 20px 40px;
+  min-width: 420px;
+  letter-spacing: 0.1em;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.4s ease;
+}
+
+.daiva-faq-cta-btn:hover {
+  background-color: #bc9c4e;
+  color: #ffffff;
+  letter-spacing: 0.15em;
+}
+
+.daiva-faq-cta-arrow {
+  margin-left: 20px;
+  font-weight: 300;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .daiva-faq-item {
+    padding: 24px;
+  }
+  .daiva-faq-cta-btn {
+    min-width: 100%;
+    width: 100%;
+    padding: 18px 24px;
+    font-size: 13px;
+  }
+}
